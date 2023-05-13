@@ -1,9 +1,66 @@
 {% extends "base.html" %}
 {% load static %} 
-<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
 
 {% block content %}
-<div class="home-main-container">
-hii
+<!-- <link rel="stylesheet" href="{% static 'css/home.css' %}"> -->
+<div id="typing-animation" class="text-main">
+    <span id="text" class="textanim"></span>
+    <span id="cursor"></span>
 </div>
+  
+ <div class="para">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam deleniti saepe, quod cum doloribus corrupti iusto vero eaque commodi reprehenderit aperiam perspiciatis sapiente facilis tenetur,</p>
+ </div>
+   <div>
+    
+   </div>
+
+ 
+  
+  
+  
+  
+    
+
+  <script>
+  const textElement = document.getElementById('text');
+  const words = ['word1', 'word2', 'word3']; // Replace with your desired words
+  let wordIndex = 0;
+  let letterIndex = 0;
+  
+  function type() {
+    if (wordIndex >= words.length) {
+      wordIndex = 0; // Reset to the first word
+    }
+  
+    const currentWord = words[wordIndex];
+  
+    if (letterIndex < currentWord.length) {
+      textElement.innerHTML += currentWord.charAt(letterIndex);
+      letterIndex++;
+      setTimeout(type, 200); // Adjust typing speed here (in milliseconds)
+    } else {
+      setTimeout(erase, 1000); // Delay before erasing the text
+    }
+  }
+  
+  function erase() {
+    const currentWord = words[wordIndex];
+  
+    if (letterIndex >= currentWord.length) {
+      letterIndex = 0;
+      wordIndex++;
+      textElement.innerHTML = ''; // Clear the text
+      setTimeout(type, 500); // Delay before typing the next word
+    } else {
+      textElement.innerHTML = currentWord.substr(0, letterIndex);
+      letterIndex++;
+      setTimeout(erase, 50); // Adjust erasing speed here (in milliseconds)
+    }
+  }
+  
+  type();
+  </script>
+  
 {% endblock content %}
