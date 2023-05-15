@@ -1,28 +1,63 @@
 {% extends "base.html" %}
-{% load static %} 
 
-
+{% load static %}
 {% block content %}
-<!-- <link rel="stylesheet" href="{% static 'css/home.css' %}"> -->
-<div id="typing-animation" class="text-main">
+<div>
+  <div id="typing-animation" class="text-main">
     <span id="text" class="textanim"></span>
-    <span id="cursor"></span>
+    <div class="chat">
+      <button>
+        Contact
+      </button>
+     </div> 
 </div>
-  
- <div class="para">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam deleniti saepe, quod cum doloribus corrupti iusto vero eaque commodi reprehenderit aperiam perspiciatis sapiente facilis tenetur,</p>
- </div>
-   <div>
-    
-   </div>
+<div class="home2">
+  <div class="container">
+    <div class="left">
+      <div class="text">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem inventore earum illo officiis fugiat,
+         modi corporis maiores nulla nobis sint cupiditate sequi ipsa odit dicta atque harum dignissimos! Minima, assumenda?
+      </div>
+      <div class="text">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem inventore earum illo officiis fugiat,
+         modi corporis maiores nulla nobis sint cupiditate sequi ipsa odit dicta atque harum dignissimos! Minima, assumenda?
+      </div>
+      <div class="text">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem inventore earum illo officiis fugiat,
+         modi corporis maiores nulla nobis sint cupiditate sequi ipsa odit dicta atque harum dignissimos! Minima, assumenda?
+      </div>
+    </div>
+    <div class="right">
+      <img src="{% static 'images/bg2.jpg' %}" alt="">
+    </div>
+  </div>
+</div>
+<div class="home3">
+  <div class="container">
+    <img src="{% static 'images/bg2.jpg' %}" alt="">
+    <img src="{% static 'images/bg2.jpg' %}" alt="">
+    <img src="{% static 'images/bg2.jpg' %}" alt=""> 
+    <div class="text">
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem inventore earum illo officiis fugiat,
+       modi corporis maiores nulla nobis sint cupiditate sequi ipsa odit dicta atque harum dignissimos! Minima, assumenda?
+      </p>
+       <div class="chat">
+        <button>
+          Contact
+        </button>
+       </div>
+    </div> 
+  </div>
+</div>
+</div>
 
- 
-  
-  
-  
-  
-    
 
+
+
+
+
+<!-- navbar set up -->
   <script>
   const textElement = document.getElementById('text');
   const words = ['word1', 'word2', 'word3']; // Replace with your desired words

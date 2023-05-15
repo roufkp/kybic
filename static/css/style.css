@@ -7,3 +7,22 @@ body{
     width: 100vw;
     min-height: 100vh;
 }
+::-webkit-scrollbar {
+    width: 0.0rem;
+    height: 0;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    width: 0.0rem;
+    height: 0;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    width: 0.0rem;
+    height: 0;
+  }
+  
