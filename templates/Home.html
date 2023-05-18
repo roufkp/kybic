@@ -2,7 +2,7 @@
 
 {% load static %}
 {% block content %}
-<div>
+<div class="mani-container">
   <div id="typing-animation" class="text-main">
     <span id="text" class="textanim"></span>
     <div class="chat">
@@ -10,55 +10,141 @@
         Contact
       </button>
      </div> 
-</div>
+    
+    </div>
+
+
+<div class="bimage">
+ 
+  <div class="graph">
+    <h1>kybic</h1>
+    <p class="pa">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat nam sunt voluptatum 
+      accusamus cupiditate veritatis. Tempora quaerat omnis officia quisquam quasi, reiciendis, quia soluta sapiente vel laudantium quod id. Totam?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda minus labore voluptate unde quae aperiam tempore? Fugiat enim eum cum. Iure soluta veritatis laudantium. Reiciendis magnam repellat sequi voluptas</p>
+  </div>
+  </div>
 <div class="home2">
   <div class="container">
-    <div class="left">
+    <div class="left" id="myTextarea">
       <div class="text">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem inventore earum illo officiis fugiat,
          modi corporis maiores nulla nobis sint cupiditate sequi ipsa odit dicta atque harum dignissimos! Minima, assumenda?
       </div>
+      
       <div class="text">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem inventore earum illo officiis fugiat,
+        normal, sit amet consectetur adipisicing elit. Rem inventore earum illo officiis fugiat,
          modi corporis maiores nulla nobis sint cupiditate sequi ipsa odit dicta atque harum dignissimos! Minima, assumenda?
       </div>
       <div class="text">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem inventore earum illo officiis fugiat,
+        test, sit amet consectetur adipisicing elit. Rem inventore earum illo officiis fugiat,
          modi corporis maiores nulla nobis sint cupiditate sequi ipsa odit dicta atque harum dignissimos! Minima, assumenda?
       </div>
     </div>
     <div class="right">
-      <img src="{% static 'images/bg2.jpg' %}" alt="">
+      <!-- <img src="{% static 'images/bg2.jpg' %}" alt=""> -->
+    <img src="{% static 'images/pexel.jpg' %}" alt="">
+
     </div>
   </div>
 </div>
 <div class="home3">
   <div class="container">
-    <img src="{% static 'images/bg2.jpg' %}" alt="">
-    <img src="{% static 'images/bg2.jpg' %}" alt="">
-    <img src="{% static 'images/bg2.jpg' %}" alt=""> 
+    <img src="{% static 'images/pexel.jpg' %}" alt="">
+    <img src="{% static 'images/pexle1.jpg' %}" alt="">
     <div class="text">
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem inventore earum illo officiis fugiat,
        modi corporis maiores nulla nobis sint cupiditate sequi ipsa odit dicta atque harum dignissimos! Minima, assumenda?
       </p>
-       <div class="chat">
+       <div class="chat" style="padding-bottom: 20px;">
         <button>
           Contact
         </button>
        </div>
-    </div> 
+    </div>  
+    <img src="{% static 'images/bg3.jpg' %}" alt=""> 
+    
+  </div>
+</div>
+
+   
+<div class="hed">
+  <h1>Few of Our favorite partners</h1>
+</div>
+     <div class="log">
+      <div><h1>k</h1></div>
+      <div><h1>y</h1></div>
+      <div><h1>b</h1></div>
+      <div><h1>i</h1></div>
+      <div><h1>c</h1></div>
+     </div>
+
+
+<div class="lock">
+  <div class="r">
+    <div class="text">
+      <h1>kybic</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis eaque excepturi sequi eveniet, perferendis esse numquam id doloremque deserunt</p>
+    </div>
+    
+  </div>
+  <div class="rono">
   </div>
 </div>
 </div>
 
 
 
+<script>
+  var leftDiv = document.getElementById("myTextarea");
+  var textContent = leftDiv.innerHTML;
+  var dummyDiv = document.createElement('div');
+  dummyDiv.innerHTML = textContent;
+  leftDiv.appendChild(dummyDiv);
 
+  var scrollHeight = dummyDiv.offsetHeight;
+  var scrollTop = 0;
+  var scrollSpeed = 5; // Adjust scroll speed (in milliseconds)
+  var scrollDelay = 4000; // Adjust delay between scrolls (in milliseconds)
+  var scrollInterval;
+  var scrollStep = 1; // Adjust scroll step (in pixels)
 
+  function scrollDiv() {
+    if (scrollTop < scrollHeight) {
+      if (scrollHeight - scrollTop <= scrollStep) {
+        // Scroll remaining distance in one step
+        leftDiv.scrollTop = scrollHeight;
+        scrollTop = scrollHeight;
+      } else {
+        // Scroll by scrollStep pixels
+        scrollTop += scrollStep;
+        leftDiv.scrollTop = scrollTop;
+      }
+    } else {
+      scrollTop = 0;
+      leftDiv.scrollTop = 0;
+    }
+  }
 
+  function startScrolling() {
+    scrollInterval = setInterval(scrollDiv, scrollSpeed);
+  }
+
+  function stopScrolling() {
+    clearInterval(scrollInterval);
+  }
+
+  var container = document.querySelector(".container");
+  container.addEventListener('mouseenter', startScrolling);
+  container.addEventListener('mouseleave', stopScrolling);
+  // container.addEventListener('click', stopScrolling);
+
+  setTimeout(function () {
+    clearInterval(scrollInterval);
+  }, scrollDelay);
+</script>
 <!-- navbar set up -->
   <script>
+
   const textElement = document.getElementById('text');
   const words = ['word1', 'word2', 'word3']; // Replace with your desired words
   let wordIndex = 0;

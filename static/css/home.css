@@ -1,3 +1,6 @@
+/*  */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
 ::-webkit-scrollbar {
     width: 0.0rem;
     height: 0;
@@ -16,11 +19,14 @@
     width: 0.0rem;
     height: 0;
   }
-  
+.mani-container{
+    font-family: 'DM Sans',sans-serif;
+    color: #f1f1f1;
+}
 
 .text-main{
     background:transparent;
-    min-height: 50vh;
+    min-height: 70vh;
     text-align: center; display: grid;
     place-items: center;
     margin: auto;
@@ -32,20 +38,21 @@
 }
 .textanim{
     text-align: center;
-    font-size: 5rem;
+    font-size: 7rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    min-height: 100px;
+    min-height: 170px;
     font-weight: 800;
     text-transform: uppercase;
+    font-family: 'DM Sans',sans-serif;
 }
 .para{
     text-align: center;
     justify-content: center;
-    color:azure;
+    /* color:azure; */
     font-size: 18px;    
 }
 .chat button{
@@ -55,15 +62,16 @@
     letter-spacing: .1rem;
     border: none;
     font-weight: 700;
+    font-family: 'DM Sans',sans-serif;
     letter-spacing: .1rem;
     background: transparent;
-    box-shadow: inset -20px -1px 0px 2px rgb(3, 226, 189);
+    box-shadow: inset -20px -1px 0px 2px rgb(244, 255, 253);
     border-radius: 100px;
     color: antiquewhite;
     transition: all 1s cubic-bezier(.66, .00, .34, 1.00);
 }
 .chat button:hover{
-    box-shadow: inset 20px -1px 0px 2px rgb(3, 226, 189);
+    box-shadow: inset 20px -1px 0px 2px rgb(240, 255, 253);
     transform: translateY(-5px);
     color: rgb(20, 20, 20);
     color: antiquewhite;
@@ -74,18 +82,35 @@
     transform: translateY(-5px);
     color: rgb(20, 20, 20);
 }
-      
+.logocontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 100px;
+}
+.logocontainer div{
+    width: 120px;
+    height: 100px;
+    background:#0e8c93;
+}
 /* home2 */
 .home2{ 
-    min-height: 100vh;
+    min-height: 90vh;
     height: fit-content;
     width: 100%;
     max-width: 100vw;
-    background: transparent;
+    background: whitesmoke;
+    background: linear-gradient(45deg, black, #d70000);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.2rem;
+    /* color: rgb(243, 248, 248); */
+    margin-top: 70px;
 }
 .home2 .container {
     display: flex;
@@ -98,10 +123,12 @@
     align-items: center;
     flex-direction: column;
     width: 50%;
-    height: 50vh;
-    max-height: 60vh;
+    height: 70vh;
+    max-height: 80vh;
     overflow-y: scroll;
-    /* margin: auto; */
+    margin: auto;
+    /* background-color: aliceblue; */
+    box-shadow: -12px -17px 0px 0px white;
 }
 .home2 .container .left .text{
     display: flex;
@@ -110,9 +137,9 @@
     /* width: 50%; */
     max-width: 500px;
     margin: auto;
-    min-height: 50vh;
-    margin: 50px auto;
-    background: transparent;
+    min-height: none;
+    margin: 100px auto;
+    background: transparent;width: 90%;
 }
 
 .home2 .container .right{
@@ -122,13 +149,13 @@
     height: fit-content;
     right: 0;
     position: relative;
-    z-index: -1;
-    /* margin: auto; */
+    z-index: 1;
+    margin: auto;
 }
 .home2 .container .right img{
 max-width: 500px;
 height: auto;
-object-fit: cover;
+object-fit: contain;
 width: 98%;
 margin: auto;
 border: 1px solid white;
@@ -143,6 +170,7 @@ box-shadow: 15px 10px 0px 0px white;
     width: 100%;
     max-width: 100vw;
     background: transparent;
+    margin-top: 100px;
 }
 .home3 .container{
     max-width: 1100px;
@@ -156,15 +184,147 @@ box-shadow: 15px 10px 0px 0px white;
 }
 .home3 .container img,.home3 .container .text{
     max-height: 40vh;
+    height: 400px;
+
     width: 40%;
-    height: fit-content;
+    /* height: fit-content; */
     min-width: 300px;
-    object-fit: cover;
+    object-fit: contain;
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-family: 'DM Sans',sans-serif;
+    font-size: 1.2rem;
+    text-align: left;
+    border: 1px solid whitesmoke;
+    display: flex;
+    flex-direction: column;
 }
 .home3 .container .text p{
     margin-bottom: 20px;
+    width: 90%;
+    margin:20px auto;
     
+}
+
+.bimage{
+    background-image: url("/static/images/bg4.jpg");
+    background-repeat:no-repeat;
+    background-size:70%;
+    height:70vh;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.graph{
+    display: flex;
+    flex-direction:column;
+    /* color: rgb(236, 225, 225); */
+    background-color: rgb(20, 20, 20,0.53);
+    text-align: center;
+    justify-content: center;
+     max-width: 800px;
+    padding: 50px;
+    font-family: 'DM Sans',sans-serif;
+
+}
+ .graph .pa{
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    margin: auto;
+ }
+.rono{
+ background-image: url("/static/images/pexle1.jpg");
+ background-repeat:no-repeat;
+ background-size:100%;
+ height:70vh;
+ margin: auto;
+ width: 50%;
+ display: flex;
+ justify-content: center;
+ align-items:center;
+ }
+ .lock{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Dm Sans',sans-serif;
+    font-size: 1.2rem;
+
+ }
+ .lock h1{
+    text-align: left;
+    letter-spacing: 1px;
+    font-size: 2rem;
+
+ }
+ .lock .r{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center;color: #f0ffff; */
+    width: 40%;
+ }
+ .lock .r .text{
+    width: 90%;
+    margin: auto;
+ }
+ 
+ .log{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-between;
+    gap: 10px;
+    /* margin-top: 100px; */
+    max-width: 700px;
+    align-items: center;
+    align-content: flex-start;
+    background:transparent;
+    min-height: 50vh;
+    place-items: center;
+    margin: auto;
+    text-align: center;
+ }
+ .hed{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Sans',sans-serif;
+ }
+ .log div{
+    width: 120px;
+    height: 100px;
+    background:#0e8c93;
+}
+
+
+
+@media (max-width:760px) {
+    .home2 .container {
+        display: flex;
+        flex-direction:column-reverse;
+        flex-wrap: wrap;
+    }
+    .home2 .container .left{
+        width: 100%;
+        height: auto;
+    }
+    .home2 .container .left .text{
+        width: 95%;
+        margin:100px auto;
+    }
+    .home2 .container .right{
+        width: 100%;
+    }
+    .bimage{
+        background-size:100%;
+    }
 }
