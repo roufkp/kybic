@@ -6,6 +6,10 @@ body{
     box-sizing: border-box;
     width: 100vw;
     min-height: 100vh;
+    cursor: none !important;
+}
+button{
+  cursor: none;
 }
 ::-webkit-scrollbar {
     width: 0.0rem;
@@ -28,4 +32,18 @@ body{
   a{
     text-decoration: none;
     color: azure;
+}
+
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff; /* Replace with your desired cursor style */
+  border-radius: 50%;
+  pointer-events: none;
+  transition: transform 0.1s ease;
+  z-index: 9999;
+  /* Add any additional styling or animation properties here */
 }

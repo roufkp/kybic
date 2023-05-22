@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
     <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/services.css' %}">
 
 </head>
 <body>
@@ -19,6 +20,16 @@
 
     {% endblock content %}
     {% include "footer.html" %}
+    <div id="custom-cursor"></div>
+
+
+    <script>
+  document.addEventListener('mousemove', function(event) {
+  var customCursor = document.getElementById('custom-cursor');
+  customCursor.style.transform = 'translate(' + event.clientX + 'px, ' + event.clientY + 'px)';
+});
+
+</script>
 </body>
 </html>
 
