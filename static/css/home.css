@@ -187,7 +187,6 @@ box-shadow: 15px 10px 0px 0px white;
     height: 400px;
 
     width: 40%;
-    /* height: fit-content; */
     min-width: 300px;
     object-fit: contain;
     justify-content: center;
@@ -223,12 +222,13 @@ box-shadow: 15px 10px 0px 0px white;
     display: flex;
     flex-direction:column;
     /* color: rgb(236, 225, 225); */
-    background-color: rgb(20, 20, 20,0.53);
+    background-color: rgb(20 20 20 / 79%);
     text-align: center;
     justify-content: center;
      max-width: 800px;
     padding: 50px;
     font-family: 'DM Sans',sans-serif;
+    align-items: flex-start;
 
 }
  .graph .pa{
@@ -254,6 +254,7 @@ box-shadow: 15px 10px 0px 0px white;
     flex-wrap: wrap;
     font-family: 'Dm Sans',sans-serif;
     font-size: 1.2rem;
+    align-items: flex-start;
 
  }
  .lock h1{
@@ -308,6 +309,15 @@ box-shadow: 15px 10px 0px 0px white;
 
 
 @media (max-width:760px) {
+    .graph{
+        align-items: flex-start;
+        text-align: left;
+    }
+    .graph .pa{
+        margin: 0;
+        text-align: left;
+        padding: 0;
+    }
     .home2 .container {
         display: flex;
         flex-direction:column-reverse;
@@ -327,4 +337,29 @@ box-shadow: 15px 10px 0px 0px white;
     .bimage{
         background-size:100%;
     }
+    .text-main .textanim{
+        font-size: 5rem;
+    }
+    .rono{
+        background-size:100%;
+          width:100%;
+        }
+        .lock .r{
+            width: 100%;
+            margin: auto;
+         }
+         .home3 .container img,.home3 .container .text{
+        width: 100%;
+        height: fit-content;
+    }
+    .hed{
+        margin-top: 100px;
+    }
+.log{
+    min-height: 0;
+    margin:0 auto 100px auto;
 }
+}
+
+
+

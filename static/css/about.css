@@ -28,21 +28,29 @@
     color: #f1f1f1;
 }
 .abou{
-    background-image: url("/static/images/bgpop.jpg");
-    background-repeat:no-repeat;
-    background-size:cover;
-    height:70vh;
+    background-image: url(/static/images/bgpop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
     margin: auto;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items:center;
     flex-direction: column;
+}
+.abou .text{
+    width: 90%;
+    /* margin: auto; */
+    max-width: 700px;
+    padding-left: 5%;
+    font-size: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.445);
+    
 }
 .butt button{
     width: fit-content;
     padding: 16px 32px;
-    font-size: 22px;
+    font-size: 1.2rem;
     letter-spacing: .1rem;
     border: none;
     font-weight: 700;
@@ -53,6 +61,7 @@
     border-radius: 100px;
     color: antiquewhite;
     transition: all 1s cubic-bezier(.66, .00, .34, 1.00);
+    margin-bottom: 20px;
 }
 .butt button:hover{
     box-shadow: inset 20px -1px 0px 2px rgb(240, 255, 253);
@@ -141,7 +150,6 @@ font-size: 5rem;
     justify-content: space-between;
     gap: 30px 20px;
     margin: 100px auto;
-    font-size: 1rem;
     max-width: 900px;
 }
 .about4 .text{
@@ -212,4 +220,102 @@ font-size: 5rem;
     text-align: left;
     margin: 25px auto;
     width: 90%;
+}
+.none{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+    align-content: center;
+    background-color:transparent;
+    margin: auto;
+    max-width: 1000px;
+    gap:50px;
+    }
+.non{
+    text-align: center;
+    width: 50%;
+    color:rgb(22, 22, 22);
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: auto;
+    
+
+
+    
+}
+.missi{
+    text-align: center;
+    width: 50%;
+    color:rgb(22, 22, 22);
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: auto;
+}
+@media (max-width:720px) {
+
+    .abou .text{
+    width: 90%;
+    /* margin: auto; */
+    max-width: 700px;
+    padding-left: 5%;
+}
+.abou .text h2{
+    font-size: 2rem !important;
+}
+.main .popleft{
+    width: 90%;
+}
+.main .popleft .paragraph{
+    width: 100%;
+}
+.main .popright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+ }
+ .main .popright img{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    box-shadow: -17px -20px 0px 0px;
+
+ }
+ .none{
+    flex-wrap:nowrap;
+    }
+ .non{
+    text-align: center;
+    width: 100%;
+    color:rgb(22, 22, 22);
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: auto;
+    
+
+
+    
+}
+.missi{
+    text-align: center;
+    width: 100%;
+    color:rgb(22, 22, 22);
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: auto;
+}
+.about4{
+    justify-content: center;
+}
+.about4 .text{
+    width: 90%;
+    max-width: 320px;
+    background:transparent;
+    min-height: 200px;
+    height: fit-content;
+    /* padding: ; */
+
+
+}
 }

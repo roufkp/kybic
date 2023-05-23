@@ -1,0 +1,389 @@
+/*  */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+::-webkit-scrollbar {
+    width: 0.0rem;
+    height: 0;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    width: 0.0rem;
+    height: 0;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    width: 0.0rem;
+    height: 0;
+  }
+  .about-main{
+    font-size: 1.2rem;
+    font-family: 'DM Sans',sans-serif;
+  }
+.mani-container{
+    font-family: 'DM Sans',sans-serif;
+    color: #f1f1f1;
+}
+.service-main{
+  display: block;
+  font-family: 'DM Sans',sans-serif;
+}
+.service-main .service1{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.service-main .service1 .heading{
+  display: flex;
+  width: 100%;
+  min-height: 70vh;
+  height: fit-content;
+  background-image: url("/static/images/bg6.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.service-main .service1 .heading .text{
+  width: 90%;
+  margin: auto;
+  max-width: 800px;
+}
+.service-main .service1 .heading .text h2{
+  font-size: 3rem;
+}
+.discovery{
+  
+  grid-area: discovery;
+  
+}
+.planning{
+  grid-area: planning;
+}
+.design{
+  grid-area: design;
+}
+.development{
+  grid-area: development;
+}
+.testing{
+  grid-area: testing;
+}
+.deployment{
+  grid-area: deployment;
+}
+.optimization{
+  grid-area: optimization;
+}
+.support{
+  grid-area: support;
+}
+  
+.service-main .service1 .workflow .wimgs{
+  width: 90%;
+  margin: auto;
+  max-width: 270px;
+  
+}
+/* .service-main .service1 .workflow .wimgl{
+     width: 100%;
+     margin: auto;
+     max-width: 500px;
+} */
+
+.service-main .service1 .workflow .big {
+  width: 100%;
+
+
+}
+.service-main .service1 .workflow p{
+   max-width: 500px;
+   margin: auto;
+}
+.service-main .service1 .workflow .big .dummy{
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+.service-main .service1 .workflow .big .head{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    
+}
+
+.service-main .service1 .workflow .big .left{
+  width: 50%;
+}
+  .service-main .service1 .workflow .big .left img{
+    width: 80%;
+    max-width: 300px;
+    margin: auto;
+  }
+
+.service-main .service1 .workflow .big .right{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .service-main .service1 .workflow .wimgl{
+  text-align: center;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction:row;
+} */
+
+.wimgl img{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-main .service1 .workflow{
+  min-height: 70vh;
+  margin: 100px auto;
+  width: 100%;
+  height: fit-content;
+  /* background: #720000; */
+  display: grid;
+  background: linear-gradient(45deg, black, #d70000);
+  grid-template-areas: 
+  'discovery planning'
+  'design design'
+  'development development'
+  'testing deployment'
+  'optimization support'  
+  ;
+  /* gap: 10px; */
+}
+.service-main .service1 .workflow > div{
+  text-align: center;
+  border: 1px solid whitesmoke;
+  background: transparent;
+  /* background: #000; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 70px;
+}
+.service-main .service1 .workflow > div h2{
+  text-transform: capitalize;
+}
+
+
+
+
+/* services 2 */
+.service-main .service2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+.service-main .service2 .left{
+  width: 50%;
+}
+.service-main .service2 .left .text{
+  width: 90%;
+  margin: auto;
+}
+.service-main .service2 .right{
+  background-image: url("/static/images/ser.jpg");
+  background-repeat:no-repeat;
+ background-size:100%;
+ height:70vh;
+ margin: auto;
+ width: 50%;
+ display: flex;
+ justify-content: center;
+ align-items:center;
+  width: 50%;
+}
+
+
+.service3{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  margin:100px  auto;
+  max-width: 1000px;
+  /* width:; */
+  text-align: center;
+}
+.service4{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+   max-width:1300px;
+  align-content: flex-start;
+  align-items: center;
+  justify-content:space-between;
+  /* background-color: #e01111; */
+  margin: auto;
+  min-height: 70vh;
+  place-items: center;
+  gap: 20px;
+
+}
+.service4 .items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  /* background-color: red; */
+  align-items: center;
+}
+.service4 .items .heading{
+  width: 100%;
+  text-align: center;
+  
+}
+
+.service4 .items .left{
+  width: 50%;
+}
+.service4 .items .left img{
+  width: 80%;
+  margin: auto; 
+}
+.service4 .items .right{
+  width: 50%;
+}
+.service4 div{
+  width: 100%;
+  /* max-width: 1200px; */
+  height:auto;
+  background-color: rgb(245, 245, 245);
+  color: #000;
+  text-align: left;
+  margin: auto;
+}
+.service5{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  /* background-color: #494242; */
+}
+.service5 .left5{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 50vh;
+  width: 50%;
+  background-color: aliceblue;
+
+}
+.service5 .left5 .sertext{
+  width: 80%;
+  color: #000;
+  margin: auto;
+}
+.service5 .right5{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 50vh;
+  background-color: #080808;
+  width: 50%;
+}
+.service5 .right5 .righttext{
+  width: 80%;
+  margin: auto;
+}
+.butt1 button{
+  width: fit-content;
+  padding: 16px 32px;
+  font-size: 1.2rem;
+  letter-spacing: .1rem;
+  border: none;
+  font-weight: 700;
+  font-family: 'DM Sans',sans-serif;
+  letter-spacing: .1rem;
+  background: transparent;
+  box-shadow: inset -20px -1px 0px 2px rgb(8, 8, 8);
+  border-radius: 100px;
+  color: rgb(17, 17, 17);
+  transition: all 1s cubic-bezier(.66, .00, .34, 1.00);
+  margin-bottom: 20px;
+}
+.butt1 button:hover{
+  box-shadow: inset 20px -1px 0px 2px rgb(20, 20, 20);
+  transform: translateY(-5px);
+  color: rgb(20, 20, 20);
+  color: rgb(20, 20, 20);
+}
+.butt1 button:focus{
+  box-shadow: inset 0px 0px 0px 0px rgb(118, 121, 119);
+  background: rgb(15, 15, 15);
+  transform: translateY(-5px);
+  color: rgb(212, 212, 212);
+}
+
+@media   (max-width:720px) {
+
+  .service-main .service1 .workflow{
+    min-height: 70vh;
+    margin: 100px auto;
+    width: 100%;
+    height: fit-content;
+    background: #720000;
+    display: grid;
+    grid-template-areas: 
+    'discovery'
+    'planning'
+    'design'
+    'development'
+    'testing' 
+    'deployment'
+    'optimization'
+    'support'  
+    ;
+    gap: 10px;
+  }
+.service-main .service1 .workflow .big .left{
+  width: 100%;
+
+}
+.service-main .service1 .workflow .big .right{
+  width: 100%;
+}
+
+
+  .service-main .service2 .left{
+    width: 100%;
+  }
+  .service-main .service2 .right{
+    width: 100%;
+  }
+  .service5 .right5{
+    width: 100%;
+    margin: 30px auto;
+  }
+  .service5 .left5{
+    width: 100%;
+    margin: 30px auto;
+  }
+}
