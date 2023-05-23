@@ -1,0 +1,41 @@
+/*  */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+::-webkit-scrollbar {
+    width: 0.0rem;
+    height: 0;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    width: 0.0rem;
+    height: 0;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    width: 0.0rem;
+    height: 0;
+  }
+  .about-main{
+    font-size: 1.2rem;
+    font-family: 'DM Sans',sans-serif;
+  }
+.mani-container{
+    font-family: 'DM Sans',sans-serif;
+    color: #f1f1f1;
+}
+.bgimage{
+  background-image:  url("/static/images/ser.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  min-height: 70vh;
+}
