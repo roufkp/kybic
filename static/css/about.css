@@ -253,7 +253,9 @@ font-size: 5rem;
     margin: auto;
 }
 @media (max-width:720px) {
-
+.non,.missi{
+    width: 100%;
+}
     .abou .text{
     width: 90%;
     /* margin: auto; */
