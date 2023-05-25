@@ -16,7 +16,9 @@
 
 <div class="bimage">
  
-  <div class="graph">
+  <div class="graph"  data-aos="fade-left"
+     data-aos-offset="500"
+     data-aos-easing="ease-in-sine">
     <h1>Lead Management Software</h1>
     <p class="pa">At KYBIC, we understand the challenges that businesses face when it comes to managing leads effectively. That's why we've developed a comprehensive lead management software that streamlines the entire process and helps you close more deals.</p>
   </div>
@@ -40,15 +42,19 @@
     </div>
     <div class="right">
       <!-- <img src="{% static 'images/bg2.jpg' %}" alt=""> -->
-    <img src="{% static 'images/Designer.png' %}" alt="">
+    <img src="{% static 'images/Designer.png' %}" alt="" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
 
     </div>
   </div>
 </div>
 <div class="home3">
   <div class="container">
-    <img src="{% static 'images/pexle1.jpg' %}" alt="">
-    <div class="text" style="background-color: whitesmoke;color: black;">
+    <img src="{% static 'images/pexle1.jpg' %}" alt="" >
+    <div class="text" style="background-color: whitesmoke;color: black;"  data-aos="fade-left"
+     data-aos-offset="500"
+     data-aos-easing="ease-in-sine">
       <p>
         If you're interested in learning more about our software or have any questions, please don't hesitate to contact us. We're always happy to help!
       </p>
@@ -58,7 +64,9 @@
         </button>
        </div>
     </div>
-    <div class="text" style="background-color: black;">
+    <div class="text" style="background-color: black;"  data-aos="fade-right"
+     data-aos-offset="500"
+     data-aos-easing="ease-in-sine">
       <p>
         If you're interested in learning more about our software or have any questions, please don't hesitate to contact us. We're always happy to help!
       </p>
@@ -68,7 +76,7 @@
         </button>
        </div>
     </div>  
-    <img src="{% static 'images/bg4.jpg' %}" alt=""> 
+    <img src="{% static 'images/bg4.jpg' %}" alt="" > 
     
   </div>
 </div>
@@ -87,10 +95,11 @@
 
 
 <div class="lock">
-  <div class="r">
+
+  <div class="r" data-aos="fade-up" data-aos-anchor-placement="center-center">
     <div class="text">
       <h1>kybic</h1>
-    <p> where innovation meets imagination. We craft extraordinary digital experiences that inspire and captivate, pushing boundaries to redefine what's possible online. Join us on this exciting journey and unleash the full potential of your digital presence."</p>
+      <p> where innovation meets imagination. We craft extraordinary digital experiences that inspire and captivate, pushing boundaries to redefine what's possible online. Join us on this exciting journey and unleash the full potential of your digital presence."</p>
     </div>
     
   </div>
@@ -154,7 +163,7 @@
   <script>
 
   const textElement = document.getElementById('text');
-  const words = ['Key to', 'Business Intelligence', 'and Creativity']; // Replace with your desired words
+  const words = ['Key to','Business','Intelligence','and','Creativity']; // Replace with your desired words
   let wordIndex = 0;
   let letterIndex = 0;
   
@@ -188,8 +197,8 @@
       setTimeout(erase, 50); // Adjust erasing speed here (in milliseconds)
     }
   }
-  
   type();
   </script>
+
   
 {% endblock content %}

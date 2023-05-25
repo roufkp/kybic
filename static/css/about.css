@@ -59,7 +59,7 @@
     background: transparent;
     box-shadow: inset -20px -1px 0px 2px rgb(244, 255, 253);
     border-radius: 100px;
-    color: antiquewhite;
+    color: rgb(255, 255, 255);
     transition: all 1s cubic-bezier(.66, .00, .34, 1.00);
     margin-bottom: 20px;
 }
@@ -159,7 +159,9 @@ font-size: 5rem;
     min-height: 200px;
     height: fit-content;
     /* padding: ; */
-
+}
+.about4 .text h2{
+ margin: 0;
 }
 
 
@@ -228,7 +230,7 @@ font-size: 5rem;
     justify-content:space-between;
     align-content: center;
     background-color:transparent;
-    margin: auto;
+    margin:200px auto;
     max-width: 1000px;
     gap:50px;
     }
@@ -237,21 +239,28 @@ font-size: 5rem;
     width: 50%;
     color:rgb(22, 22, 22);
     background-color: rgb(255, 255, 255);
-    padding: 10px;
     margin: auto;
-    
-
-
-    
+    padding: 50px 10px;
+    /* border-radius: 10px; */
+    text-transform:capitalize;
 }
 .missi{
     text-align: center;
     width: 50%;
-    color:rgb(22, 22, 22);
-    background-color: rgb(255, 255, 255);
-    padding: 10px;
+    color:whitesmoke;
+    background-color: black;
+    padding: 50px 10px;
     margin: auto;
+    /* border-radius: 10px; */
+    text-transform:capitalize;
 }
+.uline{
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #d70000;
+}
+
 @media (max-width:720px) {
 .non,.missi{
     width: 100%;

@@ -104,7 +104,7 @@
 }
 .service-main .service1 .workflow p{
    max-width: 500px;
-   margin: auto;
+   /* margin: auto; */
 }
 .service-main .service1 .workflow .big .dummy{
   max-width: 1000px;
@@ -112,7 +112,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
+  align-items: center;
 }
 .service-main .service1 .workflow .big .head{
     width: 100%;
@@ -133,6 +133,7 @@
 .service-main .service1 .workflow .big .right{
   width: 50%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -155,7 +156,7 @@
 
 .service-main .service1 .workflow{
   min-height: 70vh;
-  margin: 100px auto;
+  margin: 0px auto 100px auto;
   width: 100%;
   height: fit-content;
   /* background: #720000; */
@@ -172,7 +173,7 @@
 }
 .service-main .service1 .workflow > div{
   text-align: center;
-  border: 1px solid whitesmoke;
+  /* border: 1px solid whitesmoke; */
   background: transparent;
   /* background: #000; */
   display: flex;
@@ -180,9 +181,12 @@
   align-items: center;
   flex-direction: column;
   padding-bottom: 70px;
+  text-align: left;
 }
 .service-main .service1 .workflow > div h2{
   text-transform: capitalize;
+
+  text-align: left;
 }
 
 
@@ -196,6 +200,7 @@
   justify-content: center;
   align-items: center;
   min-height: 70vh;
+  padding: 100px 0px;
 }
 .service-main .service2 .left{
   width: 50%;
@@ -236,7 +241,7 @@
   align-items: center;
   justify-content:space-between;
   background-color: whitesmoke;
-  margin:100px auto;
+  padding:100px 0;
   width: 100%;
   min-height: 70vh;
   place-items: center;
@@ -312,7 +317,9 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  max-width: 1000px;
   align-items: center;
+  margin: auto;
   justify-content: center;
   min-height: 70vh;
   /* background-color: #494242; */
@@ -324,7 +331,7 @@
   align-items: center;
   min-height: 50vh;
   width: 50%;
-  background-color: aliceblue;
+  background-color: white;
 
 }
 .service5 .left5 .sertext{
