@@ -1,6 +1,157 @@
-{% extends "base.html" %}
+{% extends "base2.html" %}
+{% load static %}
 {% block content %}
-<div class="bgimage">
+<div class="main">
+  {% include "navbar.html" %}
+   <div class="bmag">
+    <div class="left">
+      <h1>contact</h1>
+      <p>
+        Reach out to us and let's start a conversation. Fill out the contact form below or use the provided contact information to get in touch.
+         We look forward to hearing from you! 
+      </p>
+        
+    </div>
+ 
+     <div class="right">
+      <div class="butt2">
+        <button>
+         address
+       </button>
+ </div> 
+ <div class="butt2">
+  <button>
+   E-mail
+ </button>
+</div>     
+<div class="butt2">
+  <button>
+   phone
+ </button>
+</div>                             
+     </div>
+
+    
+
+
+</div>
+ 
+<div class="explain">
+  <div class="left">
+    <h1>get in to touch </h1>
+    <p>We value your input and would be delighted to hear from you. Whether you have a question, feedback, or would like to discuss a potential collaboration, our team is ready to assist you. Please use the contact form provided or reach out to us using the contact information below. We strive to respond promptly to all inquiries and look forward to connecting with you. Thank you for your interest in Kybic.
+    </p>
+
+</div>
+<div class="right">
+  <img src="{% static 'images/bg9.png'%}" alt="">
+
+</div>
+</div>
+<div class="textmonials">
+    <!-- <h1>textmonials</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptas et qui accusamus neque libero asperiores accusantium, dolorem alias a consequuntur, provident itaque ea velit voluptatibus facilis sunt at temporibus.</p> -->
+    <div class="test-item">
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti rem nostrum culpa eaque adipisci libero alias beatae provident </p>
+       <div class="pro">
+          <div class="profile-pic">
+            <img width="48" height="48" src="https://img.icons8.com/fluency/48/person-male.png" alt="person-male"/>
+          </div>
+          <div class="text">
+            <h2>Name</h2>
+            <h5>Company</h5>
+            
+          </div>
+       </div>
+      </div>
+    </div>
+    <div class="test-item">
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti rem nostrum culpa eaque adipisci libero alias beatae provident </p>
+       <div class="pro">
+          <div class="profile-pic">
+            <img width="48" height="48" src="https://img.icons8.com/fluency/48/person-male.png" alt="person-male"/>
+          </div>
+          <div class="text">
+            <h2>Name</h2>
+            <h5>Company</h5>
+            
+          </div>
+       </div>
+      </div>
+    </div>
+    <div class="test-item">
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti rem nostrum culpa eaque adipisci libero alias beatae provident </p>
+       <div class="pro">
+          <div class="profile-pic">
+            <img width="48" height="48" src="https://img.icons8.com/fluency/48/person-male.png" alt="person-male"/>
+          </div>
+          <div class="text">
+            <h2>Name</h2>
+            <h5>Company</h5>
+            
+          </div>
+       </div>
+      </div>
+    </div>
     
 </div>
+
+
+
+
+
+
+
+<div class="login-box">
+    <p>Feel free to contact</p>
+    <form>
+      <div class="user-box">
+        <input required="" name="" type="text">
+        <label>Name</label>
+      </div>
+      <div class="user-box">
+        <input required="" name="" type="password">
+        <label>Phone</label>
+      </div>
+      <div class="user-box">
+        <input required="" name="" type="password">
+        <label>E-mail</label>
+      </div>
+      <div class="user-box">
+        <input required="" name="" type="password">
+        <label>messege</label>
+      </div>
+      <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Send messege
+      </a>
+    </form>
+  </div>
+
+
+
+
+
+<!-- <form action="">
+    <div class="form">
+    <label for="text">Name</label>
+    <input type="text" name="text">
+    <label for="text">Phone</label>
+    <input type="text" name="text">
+    <label for="text">E mail</label>
+    <input type="email" name="text">
+    <button id="test">submit</button>
+</div>
+</form> -->
+
+
+</div>
+
+
 {% endblock content %}
