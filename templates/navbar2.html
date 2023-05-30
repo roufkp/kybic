@@ -1,0 +1,46 @@
+ {% load static %} 
+
+
+
+<nav class="main-nav">
+    <div class="right">
+        <div class="logo">
+            <img src="{% static 'images/kybic2.png' %}" alt="">
+        </div>
+    </div>
+    <div class="left">
+        <div class="links">
+            <button id="open" >
+                 <!-- <img src="{% static 'images/hamburger-menu-icon.svg' %}" alt="" />  -->
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        
+            <ul class="ul" id="ul">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'services' %}">Why us?</a></li>
+                <li><a href="{% url 'contact' %}">Say Hi</a></li>
+            </ul>
+        </div>
+    </div>
+
+</nav>
+<script>
+   
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var button = document.getElementById("open");
+    var ul = document.getElementById("ul");
+    button.addEventListener("click", open);
+    // console.log("Button clicked!");
+
+  });
+  
+  function open() {
+    // Your code here
+    ul.classList.toggle("active");
+  }</script>
+
