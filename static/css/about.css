@@ -167,7 +167,7 @@ font-size: 5rem;
 
 
  .bgimage{
-    background-image: url("/static/images/bg5.jpg");
+    /* background-image: url("/static/images/bg5.jpg"); */
     background-repeat:no-repeat;
     background-size:cover;
     height:90vh;
