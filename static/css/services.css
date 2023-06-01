@@ -308,7 +308,7 @@ background-attachment: fixed;
     
   .service4 .items {
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 50px 0px;
   }
 
@@ -328,6 +328,7 @@ background-attachment: fixed;
   max-width: 1000px;
   align-items: center;
   margin: auto;
+  padding: 100px 0px;
   justify-content: center;
   min-height: 70vh;
   /* background-color: #494242; */
