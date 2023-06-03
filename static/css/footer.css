@@ -116,8 +116,8 @@ footer .socialcontainer{
 footer .socialcontainer ul li{
     width: 20px;
 }
-footer .socialcontainer span{
-    height: 0.5px;
+footer  span{
+    height: 1px;
     background-color: antiquewhite;
     width: 100%;
     display: block;
