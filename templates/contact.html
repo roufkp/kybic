@@ -17,7 +17,8 @@
       <div class="butt2">
         <button>
           <img src="{% static 'images/location.png'%}" alt="">
-        location
+          <a href= https://www.google.com/maps/place/Addox+Digital/@10.9756934,76.2254905,17z/data=!4m15!1m8!3m7!1s0x3ba7cd544f00ddb5:0xe183139898cd3a2!2sAddox+Digital!8m2!3d10.9756881!4d76.2280654!10e1!16s%2Fg%2F11fc_zm11q!3m5!1s0x3ba7cd544f00ddb5:0xe183139898cd3a2!8m2!3d10.9756881!4d76.2280654!16s%2Fg%2F11fc_zm11q?entry=ttu>location</a>  
+        
        </button>
  </div> 
  <div class="butt2">
@@ -33,6 +34,7 @@
  </button>
 </div>                             
      </div>
+   
 
     
 
@@ -94,7 +96,7 @@ data-aos-easing="ease-in-sine" class="right">
           </div>
           <div class="text">
             <h2>Sarah L</h2>
-            <h5>Marketing Manager at GlobalGrowth</h5>
+            <h5>CEO of GlobalGrowth</h5>
             
           </div>
        </div>
@@ -105,7 +107,9 @@ data-aos-easing="ease-in-sine" class="right">
 <p></p>
 <h1>Feel free to contact</h1>
 <div class="login-box">
-    <form>
+
+  <!-- <form method="post">
+    {% csrf_token %}  
       <div class="user-box">
         <input required="" name="" type="text">
         <label>Name</label>
@@ -129,7 +133,35 @@ data-aos-easing="ease-in-sine" class="right">
         <span></span>
         Send messege 
       </a>
+    </form> -->
+
+    <form method="post" action="{% url 'contact' %}">
+      {% csrf_token %}  
+      <div class="user-box">
+        <input required="" name="name" type="text">
+        <label>Name</label>
+      </div>
+      <div class="user-box">
+        <input required="" name="phone" type="text">
+        <label>Phone</label>
+      </div>
+      <div class="user-box">
+        <input required="" name="email" type="email">
+        <label>Email</label>
+      </div>
+      <div class="user-box">
+        <input required="" name="message" type="text">
+        <label>Message</label>
+      </div>
+      <button type="submit">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Send message
+      </button>
     </form>
+    
   </div>
 
 

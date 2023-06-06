@@ -4,7 +4,7 @@
 footer{
     /* border-top: 1px solid wheat; */
     width: 100%;
-    padding: 20px 0px;
+       /* padding:0px 0px 20px 0px; */
     background: transparent;
     position: relative;
     height: auto;
@@ -45,6 +45,7 @@ footer .linkcontainer ul span{
     height: 0.5px;
     background-color: antiquewhite;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 footer .linkcontainer .logo{
     width: fit-content;
@@ -116,12 +117,13 @@ footer .socialcontainer{
 footer .socialcontainer ul li{
     width: 20px;
 }
-footer  span{
+footer span {
     height: 1px;
     background-color: antiquewhite;
     width: 100%;
     display: block;
-    margin-top: 50px;
+    /* margin-top: 30px; */
+    margin-bottom: 30px;
 }
 footer .socialcontainer ul{
     width: 100%;

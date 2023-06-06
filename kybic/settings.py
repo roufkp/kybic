@@ -2,18 +2,27 @@
 
 from pathlib import Path
 
+
+
+
+import environ
+
+# env = environ.Env(
+#     DEBUG=(bool, False)
+# )
+
+# environ.Env.read_env()
+# READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', default=False)
+# if READ_DOT_ENV_FILE:
+#     environ.Env.read_env()
+
+# DEBUG =env('DEBUG')
+DEBUG =True
+# DEBUG = True
+# SECRET_KEY =env('SECRET_KEY') 
+SECRET_KEY='django-insecure-_ac#5#dw%h7ew1$16%k#q@vker42oi4hxqpbmzi^veb$8hns6s'
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-_ac#5#dw%h7ew1$16%k#q@vker42oi4hxqpbmzi^veb$8hns6s'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 CORS_ALLOWED_ORIGINS = ['08b7-2405-201-f012-a0fa-1151-954c-fa04-cfb8.ngrok-free.app']
@@ -143,20 +152,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # from pathlib import Path
 # import os
 
-# import environ
-
-# env = environ.Env(
-#     DEBUG=(bool, False)
-# )
-
-# # environ.Env.read_env()
-# READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', default=False)
-# if READ_DOT_ENV_FILE:
-#     environ.Env.read_env()
-
-# DEBUG = env('DEBUG')
-# # DEBUG = True
-# SECRET_KEY = env('SECRET_KEY')
 
 # # DB_NAME = env('DB_NAME')
 # # print(DB_NAME)
@@ -308,9 +303,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CRISPY_TEMPLATE_PACK = 'tailwind'
 
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'developer.addox@gmail.com'
-# EMAIL_HOST_PASSWORD =env('SMTP_PASSWORD')
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'developer.addox@gmail.com'
+EMAIL_HOST_PASSWORD ='vvujrwzodlzspdvt'

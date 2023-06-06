@@ -1,0 +1,92 @@
+/*  */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+::-webkit-scrollbar {
+    width: 0.0rem;
+    height: 0;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    width: 0.0rem;
+    height: 0;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    width: 0.0rem;
+    height: 0;
+  }
+.head1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #0f8f92, #06120e);
+    background-position: center;
+    width: 100%;
+    height: 25vh;
+}
+.head1 h1{
+    text-align: center;
+    font-size: 4rem;
+}
+
+.blog-main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:flex-start;
+}
+
+.blog-main .left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+
+}
+.blog-main .left img{
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.blog-main .right{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:flex-start;
+    max-width: 800px;
+    margin-right: 30px;
+    padding-right: 25px;
+
+}
+.blog-main2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:flex-start;
+}
+
+.blog-main2 .left2{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:flex-start;
+    max-width: 800px;
+    margin-left: 50px;
+    padding-left: 35px;
+}
+.blog-main2 .right2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+.blog-main2 .right2 img{
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 20px
+}
