@@ -51,6 +51,10 @@ def service_page(request):
 
 def blog_page(request):
    return render(request,"blog.html")
+
+
+def admin1_page(request):
+   return render(request,"admin1.html")
    
 
 

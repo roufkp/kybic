@@ -1,0 +1,62 @@
+/*  */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+::-webkit-scrollbar {
+    width: 0.0rem;
+    height: 0;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    width: 0.0rem;
+    height: 0;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    width: 0.0rem;
+    height: 0;
+  }
+  .admin1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #ffffff, #ffffff);
+    background-position: center;
+    width: 100%;
+    color: black;
+    height: 25vh;
+}
+.admin1{
+    text-align: center;
+    font-size: 2rem;
+}
+ .admin-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+ }
+ .admin-monials{
+    display: flex;
+    flex-direction: row;
+    align-items:center ;
+    justify-content: center;
+    width: 50%;
+    /* background-color: red; */
+    padding-top: 10px;
+ }
+ .admin-blog{
+    display: flex;
+    flex-direction:column;
+    align-items:center ;
+    justify-content: center;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    padding-top: 10px;
+    color: black;
+ }
