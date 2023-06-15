@@ -7,16 +7,16 @@ from pathlib import Path
 
 import environ
 
-# env = environ.Env(
-#     DEBUG=(bool, False)
-# )
+env = environ.Env(
+    DEBUG=(bool, False)
+)
 
-# environ.Env.read_env()
-# READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', default=False)
-# if READ_DOT_ENV_FILE:
-#     environ.Env.read_env()
+environ.Env.read_env()
+READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', default=False)
+if READ_DOT_ENV_FILE:
+    environ.Env.read_env()
 
-# DEBUG =env('DEBUG')
+DEBUG =env('DEBUG')
 DEBUG =True
 # DEBUG = True
 # SECRET_KEY =env('SECRET_KEY') 
@@ -82,15 +82,35 @@ TEMPLATES = [
 WSGI_APPLICATION = 'kybic.wsgi.application'
 
 
+
+
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'kybicdb',
+#         'USER': 'root',
+#         'PASSWORD':'kybicio1717',
+#         'HOST':'',
+#         'PORT': 3306,
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
+        'PASSWORD':env('DB_PASSWORD'),
+        'HOST':env('DB_HOST'),
+        'PORT': env('DB_PORT'),
     }
 }
+
+
+# Database
 
 
 # Password validation
@@ -308,4 +328,4 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'developer.addox@gmail.com'
-EMAIL_HOST_PASSWORD ='vvujrwzodlzspdvt'
+EMAIL_HOST_PASSWORD =env('SMTP_PASSWORD')

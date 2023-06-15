@@ -6,6 +6,7 @@ from django.template import loader
 from django.shortcuts import render
 from django.core.mail import send_mail,EmailMessage
 from django.conf import settings
+from .forms import FeedbackForm
 
 
 
@@ -55,8 +56,17 @@ def blog_page(request):
 
 def admin1_page(request):
    return render(request,"admin1.html")
-   
 
+def testimonials_page(request):
+   return render(request,"testimonials.html")
+
+def blog1_page(request):
+   return render(request,"blog1.html")
+
+
+
+   
+  
 
 
 # def send_message(request):
