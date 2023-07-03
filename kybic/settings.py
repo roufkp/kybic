@@ -2,7 +2,7 @@
 
 from pathlib import Path
 
-
+import os
 
 
 import environ
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'registration',
+    'accounts'
 ]
 
 MIDDLEWARE = [
@@ -87,16 +88,7 @@ WSGI_APPLICATION = 'kybic.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'kybicdb',
-#         'USER': 'root',
-#         'PASSWORD':'kybicio1717',
-#         'HOST':'',
-#         'PORT': 3306,
-#     }
-# }
+
 
 DATABASES = {
     'default': {
@@ -160,7 +152,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
-
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 
 
@@ -329,3 +322,6 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'developer.addox@gmail.com'
 EMAIL_HOST_PASSWORD =env('SMTP_PASSWORD')
+
+
+

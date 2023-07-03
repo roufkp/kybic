@@ -436,6 +436,9 @@ background-attachment: fixed;
     width: 100%;
     /* margin: 30px auto; */
   }
+  .service-main .service1 .heading .text h2 {
+    font-size: 2rem;
+}
 }
 @media   (max-width:1050px){
   .service-main .service2 {

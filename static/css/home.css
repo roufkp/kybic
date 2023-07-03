@@ -278,6 +278,7 @@ margin: auto;
     font-family: 'Dm Sans',sans-serif;
     font-size: 1.2rem;
     align-items: flex-start;
+    max-width: 1000px;
     margin: 100px auto 100px auto;
  }
  .lock h1{

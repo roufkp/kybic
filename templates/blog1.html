@@ -1,70 +1,67 @@
 {% extends "admin.html" %}
 {% load static %}
 {% block content %}
+<style>
+
+.button-test2{
+    padding: 7px 24px;
+    min-width: 110px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px ;
+
+
+}
+.text-test{
+    width: 90%;
+    margin: auto;
+}
+.text-test h2{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-top: 50px;
+
+}
+
+
+</style>
+
 <div class="blog1-main">
     <div class="blog1-left">
         <div class="contents">
             <h1 style="font-size: 25px;font-weight:600px ;">BLOG</h1>
-        
+        {% for c in b %}
             <div class="content">
                 <div class="text-test">
-                    <div class="img">
-                        <img src="{% static 'images/bg5.jpg' %}" alt="">
+                 <h2>{{c.heading}}</h2> 
+                  <div class="img">
+                        <img src="{{c.image.url}}" alt="">
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quis incidunt quibusdam est eligendi non fugiat aut omnis dolor,</p> 
-                    <div class="head">
-                        <h2></h2> 
-                        <p></p> 
-                    </div>
-                    <!-- <button>edit</button> -->
+                    <!-- <p>{{c.paragraph}}</p>  -->
+                <div style="margin-top: 30px;border-top: 1px solid rgb(0, 0, 0);display: flex;flex-wrap: wrap;gap: 10px; padding: 20px 0px;">
+                        
+                        <div class="button-test2" style="background-color: #20d857;">
+                            <a href="{% url 'edit_blog' c.id %}">Edit</a>
+                        </div>
+
+                        <div class="button-test2" style="background-color: #d84520;">
+                            <a href="{% url 'delete_blog' c.id %}">Delete</a>
+                        </div>
                 </div>
+                 
             </div>
-            <div class="content">
-                <div class="text-test">
-                    <div class="img">
-                        <img src="{% static 'images/ser.jpg' %}" alt="">
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quis incidunt quibusdam est eligendi non fugiat aut omnis dolor,</p> 
-                    <div class="head">
-                        <h2></h2> 
-                        <p></p> 
-                    </div>
-                    <!-- <button>edit</button> -->
-                </div>
-            </div>
-            <div class="content">
-                <div class="text-test">
-                    <div class="img">
-                        <img src="{% static 'images/home13.jpg' %}" alt="">
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quis incidunt quibusdam est eligendi non fugiat aut omnis dolor,</p> 
-                    <div class="head">
-                        <h2></h2> 
-                        <p></p> 
-                    </div>
-                    <!-- <button>edit</button> -->
-                </div>
-            </div>
-            <div class="content">
-                <div class="text-test">
-                    <div class="img">
-                        <img src="{% static 'images/home.jpg' %}" alt="">
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quis incidunt quibusdam est eligendi non fugiat aut omnis dolor,</p> 
-                    <div class="head">
-                        <h2></h2> 
-                        <p></p> 
-                    </div>
-                    <!-- <button>edit</button> -->
-                </div>
-            </div>
+        </div>
+        {% endfor %}
+            
             <div class="" style="text-align: center;color: rgb(86, 86, 87);">
                 <button style="font-size: 40px;border: 2px solid rgb(86, 86, 87); border-radius: 100px;width: 60px; height: 60px;">
                     <a href="" > <i class='bx bx-refresh'></i> </a>
                </button>
                <p >Update</p>
          </div>             
-            
         </div>
         
     
@@ -74,7 +71,7 @@
             <button style="font-size: 40px;border: 2px solid rgb(86, 86, 87); border-radius: 100px;width: 60px; height: 60px;">
                 <a href="" > <i class='bx bx-add-to-queue' ></i> </a>
            </button>
-           <p >Add BLOG</p>
+         <a href="{% url 'addblog' %}">Add BLOG</a>  
      </div>             
     
     </div>

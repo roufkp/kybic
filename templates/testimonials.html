@@ -1,51 +1,102 @@
 {% extends "admin.html" %}
 {% load static %}
 {% block content %}
+
+<style>
+
+    .content{
+        display: flex;
+        flex-direction: column;
+    
+    }
+    
+    .text-test{
+        display: flex;
+        flex-direction: column;
+        margin-right:20px ;
+    }
+    .content .text-test .head h2{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    .content .text-test .head p{
+        font-size: 13px;
+    }
+    /* .text-test p{
+        text-align: center;
+        width: 100%;
+        max-width: 90%;
+        text-align: left;
+        background-color: aqua;
+    }
+     */
+
+     .button-test{
+        display: flex;
+        flex-direction: row;
+        align-content: stretch;
+        width: 50%;
+         justify-content: space-around;
+         background-color: #12b080;
+         margin-top: 10px;
+         margin-bottom: 20px;
+         color: aliceblue;
+         border-radius: 15px;
+         box-shadow: 2px 3px 14px 4px rgba(0, 0, 0, 0.151);
+
+     }
+     .button-test2{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        width: auto;
+        min-width: 100px;
+        padding: 7px 32px;
+  
+         color: aliceblue;
+         border-radius: 15px;
+         box-shadow: 2px 3px 14px 4px rgba(0, 0, 0, 0.151);
+
+     }
+     .add-tes{
+        display: flex;
+        
+     }
+
+        </style>
 <div class="testimonial-main">
 <div class="testimonial-left">
     <div class="contents">
         <h1 style="font-size: 25px;font-weight:600px ;">Testimonials</h1>
-    
+
+
+    {% for a in testimonials %}
         <div class="content">
             <div class="text-test">
-                <p>KYBIC transformed our online presence! Their expertise brought our brand to life with a stunning website. Highly recommended!</p> 
+                    <p style="overflow-wrap: break-word">{{a.paragraph}}</p> 
+ 
+               
                 <div class="head">
                     <div class="img">
-                        <img src="https://img.icons8.com/material-rounded/48/user-male-circle.png" alt="">
+                        <img src="{{a.image.url}}" alt="">
                     </div>
-                    <h2>Emily R</h2> 
-                    <p>CEO of Stellar Solutions</p> 
+                <h2>{{a.name}}</h2> 
+                    <p>{{a.company}}</p> 
                 </div>
-                <!-- <button>edit</button> -->
+              <div style="margin-top: 30px;border-top: 1px solid rgb(0, 0, 0);display: flex;flex-wrap: wrap;gap: 10px; padding: 20px 0px;">
+                <div class="button-test2" style="background-color: #20d857;">
+                    <a href="{% url 'edit_testimonial' a.id %}">Edit</a>
+                </div>
+                <div class="button-test2" style="background-color: #d84520;">
+                    <a href="{% url 'delete_testimonial' a.id %}">Delete</a>
+               </div>
+              </div>
+                
             </div>
         </div>
-        <div class="content">
-            <div class="text-test">
-                <p>Working with KYBIC was a pleasure. They built us a visually stunning and functional website. Exceptional work!</p> 
-                <div class="head">
-                    <div class="img">
-                        <img src="https://img.icons8.com/material-rounded/48/user-male-circle.png" alt="">
-                    </div>
-                    <h2>Daniel M</h2>
-                    <p>Founder of TechConnect</p>
-                  
-                </div>
-                <!-- <button>edit</button> -->
-            </div>
-        </div>
-        <div class="content">
-            <div class="text-test">
-                <p>KYBIC exceeded our expectations. Their creativity and technical expertise resulted in a standout website. Highly recommended!</p> 
-                <div class="head">
-                    <div class="img">
-                        <img src="https://img.icons8.com/material-rounded/48/user-male-circle.png" alt="">
-                    </div>
-                    <h2>Sarah L</h2> 
-                    <p>CEO of GlobalGrowth</p>
-                </div>
-                <!-- <button>edit</button> -->
-            </div>
-        </div>
+        {% endfor %}
+        
+        
         <div class="" style="text-align: center;color: rgb(86, 86, 87);">
             <button style="font-size: 40px;border: 2px solid rgb(86, 86, 87); border-radius: 100px;width: 60px; height: 60px;">
                 <a href="" > <i class='bx bx-refresh'></i> </a>
@@ -62,9 +113,10 @@
         <button style="font-size: 40px;border: 2px solid rgb(86, 86, 87); border-radius: 100px;width: 60px; height: 60px;">
             <a href="" > <i class='bx bx-add-to-queue' ></i> </a>
        </button>
-       <p >Add Testimonial</p>
+       <div class="add-tes">
+       <a href="{% url 'addtestimonial' %}">Add Testimonial</a>
+    </div>
  </div>             
-
 </div>
 </div>
 

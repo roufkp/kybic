@@ -145,6 +145,36 @@
   color: rgb(212, 212, 212);
 }
 
+@media (max-width:720px){
 
+
+  .testimonial-main{
+    /* display: flex; */
+    /* flex-direction:row; */
+    /* flex-wrap: wrap; */
+    min-height: 90vh;
+    height: fit-content;
+    width: 100%;
+    max-width: 100vw;
+  
+  }
+  
+.testimonial-main .testimonial-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+  width: 100%;
+  max-width: 450px;
+  /* height: 70vh; */
+  max-height: 80vh;
+  overflow-y: scroll;
+  /* box-shadow: 2px 3px 13px 6px rgba(0, 0, 0, 0.144); */
+  background-color: #f1f1f1;
+  margin: auto;
+}
+
+
+}
 
   

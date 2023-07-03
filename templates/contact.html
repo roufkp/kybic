@@ -58,50 +58,29 @@ data-aos-easing="ease-in-sine" class="right">
 <div class="textmonials">
     <!-- <h1>textmonials</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptas et qui accusamus neque libero asperiores accusantium, dolorem alias a consequuntur, provident itaque ea velit voluptatibus facilis sunt at temporibus.</p> -->
+    {% for testimonial in testimonials %}
+    
+   
     <div class="test-item">
       <div class="content">
-        <p>KYBIC transformed our online presence! Their expertise brought our brand to life with a stunning website. Highly recommended!</p>
+        <p>{{testimonial.paragraph}}</p>
        <div class="pro">
           <div class="profile-pic">
-            <img width="48" height="48" src="https://img.icons8.com/material-rounded/48/user-male-circle.png" alt="user-male-circle"/>   
+            <img width="48" height="48" src="{{testimonial.image.url}}" alt="user-male-circle"/>   
           </div>
           <div class="text">
-            <h2>Emily R</h2>
+            <h2>{{testimonial.name}}</h2>
             <h5> CEO of Stellar Solutions</h5>
             
           </div>
        </div>
       </div>
     </div>
-    <div class="test-item">
-      <div class="content">
-        <p>Working with KYBIC was a pleasure. They built us a visually stunning and functional website. Exceptional work! </p>
-       <div class="pro">
-          <div class="profile-pic">
-            <img width="48" height="48" src="https://img.icons8.com/material-rounded/48/user-male-circle.png" alt="user-male-circle"/>          </div>
-          <div class="text">
-            <h2>Daniel M</h2>
-            <h5>Founder of TechConnect</h5>
-            
-          </div>
-       </div>
-      </div>
-    </div>
-    <div class="test-item">
-      <div class="content">
-        <p>KYBIC exceeded our expectations. Their creativity and technical expertise resulted in a standout website. Highly recommended! </p>
-       <div class="pro">
-          <div class="profile-pic">
-            <img width="48" height="48" src="https://img.icons8.com/material-rounded/48/user-male-circle.png" alt="user-male-circle"/>   
-          </div>
-          <div class="text">
-            <h2>Sarah L</h2>
-            <h5>CEO of GlobalGrowth</h5>
-            
-          </div>
-       </div>
-      </div>
-    </div>
+    {% empty %}
+    <p>nothing</p>
+     {% endfor %}
+   
+
     
 </div>
 <p></p>
