@@ -23,13 +23,18 @@
                 <li><a href="{% url 'services' %}">Why us?</a></li>
                 <li><a href="{% url 'contact' %}">Say Hi</a></li>
                 <li><a href="{% url 'blog' %}">Blog</a></li>
-                <li><a href="{% url 'admin1' %}">Admin</a></li>
+                {% comment %} <li><a href="{% url 'admin1' %}">Admin</a></li> {% endcomment %}
                 <li><a href="{% url 'testimonials' %}"></a></li>
                 <li><a href="{% url 'blog1' %}"></a></li>
                 <li><a href="{% url 'form' %}"></a></li>
                 <li><a href="{% url 'blogform' %}"></a></li>
-                {% comment %} <li><a href="{% url 'register' %}">register</a></li>
-                <li><a href="{% url 'login' %}"></a>login</li> {% endcomment %}
+                {% if user.is_authenticated %}
+                 <!-- <li>hello,{{user.first_name}}</li> -->
+                <li><a href="{% url 'accounts:logout' %}">logout</a></li> 
+                 {% else %}
+                 <li><a href="{% url 'accounts:register' %}">Register</a></li>
+                 <li><a href="{% url 'accounts:login' %}">Login</a></li> 
+                 {% endif %}
                
               
               

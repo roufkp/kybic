@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from django.views import generic
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 from django.http import HttpResponse
 from django.template import loader
@@ -11,6 +12,7 @@ from .models import Testimonials,Blog
 from . import views
 # from django.contrib.auth.models import user, auth
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 
@@ -19,8 +21,12 @@ def test(request):
   return HttpResponse(template.render())
 
 
-class LandingPageView(generic.TemplateView):
-    template_name = "home.html"
+class LandingPageView(generic.TemplateView,LoginRequiredMixin):
+   template_name = "home.html"
+
+
+
+
 
 def about_page(request):
    testimonials=Testimonials.objects.all()
@@ -73,6 +79,8 @@ def blog_page(request):
 def admin1_page(request):
    return render(request,"admin1.html")
 
+
+@login_required
 def testimonials_page(request):
    testimonials = Testimonials.objects.all()
    context = {
@@ -80,6 +88,8 @@ def testimonials_page(request):
    }
    return render(request,"testimonials.html",context)
 
+
+@login_required
 def blog1_page(request):
    a =Blog.objects.all()
    context ={
@@ -97,6 +107,8 @@ def form_page(request):
 
 def blogform_page(request):
    return render(request,"blogform.html")
+
+
 
 
 

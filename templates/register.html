@@ -1,4 +1,4 @@
- 
+{% extends "base.html" %}
 {% load static %}
 {% block content %}
 
@@ -7,8 +7,69 @@
     <title>Login</title>
 </head>
 <body>
-    <h2>Login</h2>
-    <form action="register"   method="post">
+<style>
+.register-main{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
+  font-family: 'Dm sans','sans-serif';
+}
+form{
+    background: linear-gradient(45deg, #0f8f92, #14b87d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  padding: 30px;
+  border-radius: 10px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.151);
+    font-family: 'Dm sans','sans-serif';
+}
+input{
+  background-color: rgb(252, 252, 252);
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  display: flex;
+  
+}
+input::file-selector-button{
+  background-color: rgb(26, 26, 26);
+  padding: 10px;
+  color: aliceblue;
+  border-radius: 15px;
+  
+    /* box-shadow: 2px 3px 14px 4px rgba(0, 0, 0, 0.151); */
+
+}
+input[type="submit"]{
+  background-color:rgb(14, 14, 14);
+  color: azure;
+  padding: 15px;
+  border-radius: 15px;
+    /* box-shadow: 2px 3px 14px 4px rgba(0, 0, 0, 0.151); */
+}
+
+
+</style>
+
+
+
+
+    
+<div class="register-main">
+    
+    <form action="{% url 'accounts:register' %}"   method="post">
+        <h2>REGISTER</h2> 
         {% csrf_token %}
         <input type="text"  name="first_name" placeholder="first_name">
         <br>
@@ -16,20 +77,22 @@
         <br>
          <input type="text"  name="username" placeholder="username">
         <br>
-         <input type="password1"  name="password1" placeholder="password1">
+        <input type="email"  name="email" placeholder="email">
         <br>
-        <input type="password2"  name="password2" placeholder="password2">
+         <input type="password1"  name="password1" placeholder="password">
         <br>
-         <input type="email"  name="email" placeholder="email">
+        <input type="password2"  name="password2" placeholder="confirm password">
         <br>
+         
         <input type="submit">
     </form>
+</div>
     <div>
-        {% {% for messages in messages  %}
+        {% for message in messages  %}
           
        
-    <h3>{{messages}}</h3>
-    {% endfor %}%}
+    <h3>{{message}}</h3>
+    {% endfor %}
     </div>
 </body>
 </html>

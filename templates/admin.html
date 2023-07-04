@@ -62,8 +62,10 @@
     <div class="   mx-auto mt-1 pb-2 shadow" >
         <nav class="max-w-8xl flex justify-between   px-2 mb-0">
             <div class="container mx-auto flex flex-wrap items-center justify-between flex-row-reverse">
-            
-                <img src="{% static 'images\kybicicon.png' %}" alt="" style="width:30px;margin:auto 10px;">    
+            <a href="{% url 'home' %}">
+                <img src="{% static 'images\kybicicon.png' %}" alt="" style="width:30px;margin:auto 10px;"> 
+            </a>
+                   
                 <span class="self-center text-lg font-semibold whitespace-nowrap">KYBIC</span>
 
              
@@ -109,7 +111,7 @@
                             <span>Blog</span>
                         </li>
                     </a>
-                    <a href="{% url 'home' %}"><li class="nav-item">
+                    <a href="{% url 'accounts:logout' %}"><li class="nav-item">
                         <i class="bx bxs-log-out"></i>
                         <span>Logout</span>
                     </li></a>
