@@ -387,7 +387,7 @@ margin: auto;
 @media   (max-width:1050px){
     .text-main {
         background: transparent;
-        min-height: 50vh;
+        /* min-height: 50vh; */
         text-align: center;
         display: grid;
         place-items: center;

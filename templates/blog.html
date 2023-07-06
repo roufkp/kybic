@@ -5,24 +5,33 @@
  <div class="head1">
   <h1>The Blog</h1>
  </div>
-  <div class="blog-main">
+  <!-- <div class="blog-main">
     <div class="left">
       <img src="{% static 'images/bg5.jpg' %}" alt="">
+      <div class="right">
+        <h1>BLOG</h1>
+        <div class="chat">
+          <button>
+           <a href="">Read more</a>
+         </button>
+   </div>
+      </div>
     </div>
-    <div class="right">
-      <h1>BLOG</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quis incidunt quibusdam est eligendi non fugiat aut omnis dolor, eveniet exercitationem nam temporibus consectetur? Expedita est minima nisi exercitationem odit.</p>
-      <div class="chat">
-        <button>
-         <a href=""> Read more</a>
-       </button>
- </div>
+    <div class="left">
+      <img src="{% static 'images/bg5.jpg' %}" alt="">
+      <div class="right">
+        <h1>BLOG</h1>
+        <div class="chat">
+          <button>
+           <a href="">Read more</a>
+         </button>
+   </div>
+      </div>
     </div> 
-  </div>
-  <div class="blog-main2">
+  </div> 
+   <div class="blog-main2">
     <div class="left2">
       <h1>BLOG</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quis incidunt quibusdam est eligendi non fugiat aut omnis dolor, eveniet exercitationem nam temporibus consectetur? Expedita est minima nisi exercitationem odit.</p>
       <div class="chat">
         <button>
          <a href="">Read more</a>
@@ -31,15 +40,18 @@
     </div>
      <div class="right2">
       <img src="{% static 'images/ser.jpg' %}" alt="">
-     </div>
+     </div> -->
+     
   </div>
-  <div class="blog-main">
+  <!-- <div class="blog-main">
+    {% {% for blog in blog1  %}
+      
+    {% endfor %}%}
     <div class="left">
-      <img src="{% static 'images/home13.jpg' %}" alt="">
+      src="{{blog.image.url}}"
     </div>
     <div class="right">
-      <h1>BLOG</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quis incidunt quibusdam est eligendi non fugiat aut omnis dolor, eveniet exercitationem nam temporibus consectetur? Expedita est minima nisi exercitationem odit.</p>
+      <h1>{blog.heading}</h1>
       <div class="chat">
         <button>
          <a href="">Read more</a>
@@ -47,20 +59,61 @@
  </div>
     </div>
   </div>
-  <div class="blog-main2">
+  {% empty %}
+  {% endfor %} -->
+
+  <div class="blog-main">
+    <div class="left">
+      <img src="{% static 'images/home13.jpg' %}" alt="">
+    </div>
+    <div class="right">
+      <h1>BLOG</h1>
+      <div class="chat">
+        <button>
+         <a href="">Read more</a>
+       </button>
+ </div>
+    </div>
+  </div>
+  <div class="blog-main">
+    <div class="left">
+      <img src="{% static 'images/bg5.jpg' %}" alt="">
+    </div>
+    <div class="right">
+      <h1>BLOG</h1>
+      <div class="chat">
+        <button>
+         <a href="">Read more</a>
+       </button>
+ </div>
+    </div>
+  </div>
+  <div class="blog-main">
+    <div class="left">
+      <img src="{% static 'images/bg5.jpg' %}" alt="">
+    </div>
+    <div class="right">
+      <h1>BLOG</h1>
+      <div class="chat">
+        <button>
+         <a href="">Read more</a>
+       </button>
+ </div>
+    </div>
+  </div>
+  <!-- <div class="blog-main2">
     <div class="left2">
       <h1>BLOG</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quis incidunt quibusdam est eligendi non fugiat aut omnis dolor, eveniet exercitationem nam temporibus consectetur? Expedita est minima nisi exercitationem odit.</p>
       <div class="chat">
         <button>
          <a href="{% url 'form' %}">Read more</a>
        </button>
  </div>
-    </div>
-    <div class="right2">
+    </div> 
+     <div class="right2">
       <img src="{% static 'images/home.jpg' %}" alt="">
     </div>
-  </div>
+  </div>  -->
 
  
 
