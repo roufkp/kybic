@@ -6,6 +6,7 @@ from django.urls import path
 
 
 
+
 from registration.views import (LandingPageView,contact_page,service_page,
 about_page,blog_page,admin1_page,testimonials_page,blog1_page,blogform_page,form_page
 ,create_testimonial,edit_testimonial,delete_testimonial,create_Blog,edit_blog,delete_blog,)
@@ -32,6 +33,9 @@ urlpatterns = [
      path('edit_blog/<int:pk>/', edit_blog, name='edit_blog'),
       path('delete_blog/<int:pk>/', delete_blog, name='delete_blog'),
        path('accounts/', include('accounts.urls',namespace="accounts")),
+        
+       
+       
       
       
 

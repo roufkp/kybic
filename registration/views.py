@@ -13,6 +13,8 @@ from . import views
 # from django.contrib.auth.models import user, auth
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.shortcuts import render, get_object_or_404
+from .models import BlogPost
 
 
 
@@ -57,6 +59,8 @@ def contact_page(request):
             headers={'From': email}
          )
          email.send()
+
+         
          return render(request,"contact.html",{testimonials:'testimonials'})
       else:
          return render(request, 'contact.html')  # Render the contact form template if it's a GET request
@@ -73,7 +77,12 @@ def service_page(request):
    
 
 def blog_page(request):
-   return render(request,"blog.html")
+   blog =Blog.objects.all()
+   context ={
+      'blog':blog,
+   }
+   return render(request,"blog.html",context)
+
 
 
 def admin1_page(request):
@@ -205,7 +214,13 @@ def delete_blog(request, pk):
       return redirect('blog1')
    
    
-#edit end
+def blog_post_detail(request, blog_id):
+    blog_id = get_object_or_404(Blog, id=blog_id)
+    return render(request, 'blog_post_detail.html', {'blog_id': blog_id})
+
+
+
+
 
 
 

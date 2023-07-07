@@ -2,12 +2,30 @@
 {% include "" %}
 {% load static %}
 {% block content %}
- <div class="head1">
+
+<div class="blog-post-detail">
+    <h2>{{ blog_id.title }}</h2>
+    <p>{{ blog_id.content }}</p>
+    <p>Published on: {{ blog_id.pub_date }}</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+ {% comment %} <div class="head1">
   <h1>The Blog</h1>
  </div>
   </div>
 <div class="blog-main">
-     {% for blog in blog %}
+     {% for blog in blog  %}
      <div class="blog">
       <div class="left">
         <img  src="{{blog.image.url}}"  >
@@ -16,7 +34,7 @@
           <h1>{{blog.heading}}</h1>
           <div class="chat">
             <button>
-              <a href="{% url 'registration:blog_post_detail'  blog.id %}  "  >Read More</a>
+             <a href="">Read more</a>
            </button>
           </div>
        </div>
@@ -25,18 +43,7 @@
   {% empty %}
   {% endfor %}
 </div>
-  
-
-<!-- {% for blog_post in blog_posts %}
-    <div class="blog-post">
-        <h2>{{ blog_post.title }}</h2>
-        <p>{{ blog_post.content }}</p>
-        <p>Published on: {{ blog_post.pub_date }}</p>
-        <a href="{% url 'registration:blog_post_detail' %}" blog-post.id >Read More</a>
-    </div>
-{% empty %}
-{% endfor %} -->
-
+    {% endcomment %}
  
  
 
