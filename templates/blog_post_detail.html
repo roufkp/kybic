@@ -2,11 +2,31 @@
 {% include "" %}
 {% load static %}
 {% block content %}
-
+<style>
+  .blog-post-detail{
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    min-height: 100vh;
+  }
+  .blog-post-detail img{
+    width: 90%;
+    height: 350px;
+    object-fit: cover;
+  }
+</style>
 <div class="blog-post-detail">
-    <h2>{{ blog_id.title }}</h2>
-    <p>{{ blog_id.content }}</p>
-    <p>Published on: {{ blog_id.pub_date }}</p>
+{% if blog %}
+    <img src="{{blog.image.url}}" alt="">
+    <h2 class="text-3xl w-full">{{ blog.heading }}</h2>
+    <p class="text-align-left w-full">{{ blog.paragraph }}</p>
+    <p class="text-align-left w-full">Published on: {{ blog.created_at }}</p>
+{% endif %}
+    
 </div>
 
 

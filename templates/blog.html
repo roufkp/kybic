@@ -2,44 +2,37 @@
 {% include "" %}
 {% load static %}
 {% block content %}
- <div class="head1">
-  <h1>The Blog</h1>
- </div>
-  </div>
-<div class="blog-main">
+
+<section class="bg-dark dark:bg-gray-900">
+  <div class="container px-6 py-10 mx-auto">
+      <h1 class="text-3xl font-semibold text-white capitalize lg:text-4xl dark:text-white">From the blog</h1>
+
+      <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
      {% for blog in blog %}
-     <div class="blog">
-      <div class="left">
-        <img  src="{{blog.image.url}}"  >
-        </div>
-       <div class="right">
-          <h1>{{blog.heading}}</h1>
-          <div class="chat">
-            <button>
-              <a href="{% url 'registration:blog_post_detail'  blog.id %}  "  >Read More</a>
-           </button>
+
+          <div class="lg:flex">
+              <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="{{blog.image.url}}" alt="">
+
+              <div class="flex flex-col gap-4 py-6 lg:mx-6">
+                  <a href="{% url 'registration:blog_post_detail'  blog.id %}" class="text-xl font-semibold text-gray-100 hover:underline dark:text-white ">
+                    {{blog.heading}}
+                  </a>
+                  
+                  <span class="text-sm text-gray-500 dark:text-gray-200">On: {{blog.created_at}}</span>
+              </div>
           </div>
-       </div>
-     </div>
-    
-  {% empty %}
-  {% endfor %}
-</div>
-  
+             
+      {% empty %}
+      {% endfor %}
+      </div>
+  </div>
+</section>
 
-<!-- {% for blog_post in blog_posts %}
-    <div class="blog-post">
-        <h2>{{ blog_post.title }}</h2>
-        <p>{{ blog_post.content }}</p>
-        <p>Published on: {{ blog_post.pub_date }}</p>
-        <a href="{% url 'registration:blog_post_detail' %}" blog-post.id >Read More</a>
-    </div>
-{% empty %}
-{% endfor %} -->
-
- 
  
 
 
   
 {% endblock content %}
+
+
+<!-- component -->

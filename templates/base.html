@@ -20,6 +20,8 @@
         <link rel="stylesheet" href="{% static 'css/form.css' %}">
         <link rel="stylesheet" href="{% static 'css/formtes.css' %}">
      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -27,7 +29,11 @@
     {% block content %}
 
     {% endblock content %}
-    {% include "footer.html" %}
+        {% block footer %}
+{% include "footer.html" %}
+    {% endblock footer %}
+    
+    
     <div id="custom-cursor"></div>
 
 

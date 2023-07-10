@@ -7,8 +7,7 @@
     <div class="left">
       <h1>contact</h1>
       <p>
-        Reach out to us and let's start a conversation. Fill out the contact form below or use the provided contact information to get in touch.
-         We look forward to hearing from you! 
+        Reach out to us and let's start a conversation. 
       </p> 
         
     </div>
@@ -40,125 +39,83 @@
 
 
 </div>
- 
-<div class="explain">
-  <div class="left">
-    <h1>get in  touch </h1>
-    <p>We value your input and would be delighted to hear from you. Whether you have a question, feedback, or would like to discuss a potential collaboration, our team is ready to assist you. Please use the contact form provided or reach out to us using the contact information below. We strive to respond promptly to all inquiries and look forward to connecting with you. Thank you for your interest in Kybic.
-    </p>
-     
-</div>
-<div data-aos="fade-right"
-data-aos-offset="300"
-data-aos-easing="ease-in-sine" class="right">
-  <img src="{% static 'images/bg9.png'%}" alt="">
 
-</div>
-</div>
 <div class="textmonials">
-    <!-- <h1>textmonials</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptas et qui accusamus neque libero asperiores accusantium, dolorem alias a consequuntur, provident itaque ea velit voluptatibus facilis sunt at temporibus.</p> -->
-    {% for testimonial in testimonials %}
-    
-   
-    <div class="test-item">
-      <div class="content">
-        <p>{{testimonial.paragraph}}</p>
-       <div class="pro">
-          <div class="profile-pic">
-            <img width="48" height="48" src="{{testimonial.image.url}}" alt="user-male-circle"/>   
-          </div>
-          <div class="text">
-            <h2>{{testimonial.name}}</h2>
-            <h5> CEO of Stellar Solutions</h5>
-            
-          </div>
-       </div>
-      </div>
+  <div class="" style="width: 100%; font-size:28px; font-weight: 600;">
+  <h1>HEAR FROM OUE HAPPY CUSTOMERS</h1>
+</div>
+  {% for testimonial in testimonials %}
+  <div class="test-item">
+    <div class="content">
+      <p>{{testimonial.paragraph}}</p>
+     <div class="pro">
+        <div class="profile-pic">
+          <img width="48" height="48" src="{{testimonial.image.url}}" alt="user-male-circle"/>   
+        </div>
+        <div class="text">
+          <h2>{{testimonial.name}}</h2>
+          <h5> CEO of Stellar Solutions</h5>
+          
+        </div>
+     </div>
     </div>
-    {% empty %}
-    <p>nothing</p>
-     {% endfor %}
-   
-
-    
-</div>
-<p></p>
-<h1>Feel free to contact</h1>
-<div class="login-box">
-
-  <!-- <form method="post">
-    {% csrf_token %}  
-      <div class="user-box">
-        <input required="" name="" type="text">
-        <label>Name</label>
-      </div>
-      <div class="user-box">
-        <input required="" name="" type="password">
-        <label>Phone</label>
-      </div>
-      <div class="user-box">
-        <input required="" name="" type="password">
-        <label>E-mail</label>
-      </div>
-      <div class="user-box">
-        <input required="" name="" type="password">
-        <label>Messege</label>
-      </div>
-      <a href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Send messege 
-      </a>
-    </form> -->
-
-    <form method="post" action="{% url 'contact' %}">
-      {% csrf_token %}  
-      <div class="user-box">
-        <input required="" name="name" type="text">
-        <label>Name</label>
-      </div>
-      <div class="user-box">
-        <input required="" name="phone" type="text">
-        <label>Phone</label>
-      </div>
-      <div class="user-box">
-        <input required="" name="email" type="email">
-        <label>Email</label>
-      </div>
-      <div class="user-box">
-        <input required="" name="message" type="text">
-        <label>Message</label>
-      </div>
-      <button type="submit">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Send message
-      </button>
-    </form>
-    
   </div>
-
-
-
-
-
-<!-- <form action="">
-    <div class="form">
-    <label for="text">Name</label>
-    <input type="text" name="text">
-    <label for="text">Phone</label>
-    <input type="text" name="text">
-    <label for="text">E mail</label>
-    <input type="email" name="text">
-    <button id="test">submit</button>
+  {% empty %}
+  <p>nothing</p>
+   {% endfor %} 
 </div>
-</form> -->
 
+
+<div class="w-full" style="background: #1a1919;">
+  <div class="explain">
+    <div class="left">
+    <h1>Get in touch</h1>
+    <p> Please use the contact form provided or reach out to us using the contact information below. We strive to respond promptly to all inquiries and look forward to connecting with you. Thank you for your interest in Kybic.
+    </p>
+  </div>
+  </div>
+  <div class="flex flex-row flex-wrap justify-center items-center w-full">
+    <div data-aos="fade-right"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine" class="right" style="max-width: 600px;width: 90%;margin: auto;">
+        <img src="{% static 'images/c1.svg'%}" alt="">
+    </div>
+  
+  <div class="login-box">
+    <h1>Feel free to contact</h1>
+  
+      <form method="post" action="{% url 'contact' %}">
+        {% csrf_token %}  
+        <div class="user-box">
+          <input required="" name="name" type="text">
+          <label>Name</label>
+        </div>
+        <div class="user-box">
+          <input required="" name="phone" type="text">
+          <label>Phone</label>
+        </div>
+        <div class="user-box">
+          <input required="" name="email" type="email">
+          <label>Email</label>
+        </div>
+        <div class="user-box">
+          <input required="" name="message" type="text">
+          <label>Message</label>
+        </div>
+        <button type="submit">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Send message
+        </button>
+      </form>
+      
+    </div>
+  
+  
+  </div>
+</div>
 
 </div>
 

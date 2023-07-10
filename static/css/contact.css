@@ -1,6 +1,6 @@
 /*  */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Freehand&display=swap');
 ::-webkit-scrollbar {
     width: 0.0rem;
     height: 0;
@@ -35,6 +35,8 @@
 .main h1{
   text-transform: capitalize;
   text-align: center;
+  font-family: 'Freehand', cursive;
+  
 
 }
 .main a{
@@ -52,22 +54,22 @@
 }
 
 .bmag {
-  background-image: url("/static/images/contact11.jpg");
-  
+  background-image: url(/static/images/contact11.jpg);
   /* background: linear-gradient(45deg, #0f8f92, #06120e); */
   background-repeat: no-repeat;
   background-size: cover;
-  background-position:center;
+  background-position: center;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: flex-start;
   align-content: flex-end;
   align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
+  padding: 100px 0px;
   margin: auto;
   height: fit-content;
-  min-height: 60vh;
+  /* min-height: 60vh; */
   /* padding-left: 80px; */
 }
 .bmag .left{
@@ -96,7 +98,7 @@ flex-direction:row;
 justify-content:center;
 align-items: flex-end;
 flex-wrap: nowrap;
-width: 50%;
+/* width: 50%; */
 gap: 25px;
 max-width: 800px;
 }
@@ -110,7 +112,8 @@ max-width: 800px;
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 150px auto;
+  flex-wrap: wrap;
+  margin: 70px auto;
   max-width: 100vw;
   overflow-x: scroll;
 }
@@ -191,17 +194,26 @@ max-width: 800px;
   }
   .explain{
     width: 95%;
+    margin: auto;
+    color: #f1f1f1;
+
   }
-  .explain .left{
-  display: flex;
-  flex-direction:column;
-  justify-content: center;
-  align-items:flex-start;
-  width: 50%;
-  margin-top: 30px;
+  .explain .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    max-width: 800px;
+    text-align: center;
+    margin-top: 30px;
 }
 .explain .left h1{
   margin-bottom: 0%;
+  font-size: 28px;
+  font-weight: 600;
+  
 
   
 }
@@ -249,6 +261,10 @@ max-width: 800px;
   position: relative;
   /* background-color: #16dd91; */
   margin: 10px auto;
+}
+.login-box h1{
+  color: aliceblue;
+  font-weight: 600;
 }
 
 .login-box .user-box input {
@@ -439,7 +455,7 @@ max-width: 800px;
   background-color: #b90d23;
 
 } */
-.right .butt2 button{
+.right .butt2 button {
   width: fit-content;
   padding: 12px 32px;
   font-size: 16px;
@@ -451,8 +467,8 @@ max-width: 800px;
   letter-spacing: .1rem;
   background: rgb(255, 255, 255);
   /* box-shadow: inset -20px -1px 0px 2px rgb(244, 255, 253); */
-  border-radius: 100px;
-  color:black;
+  /* border-radius: 100px; */
+  color: black;
   transition: all 1s cubic-bezier(.66, .00, .34, 1.00);
   margin-bottom: 20px;
 }

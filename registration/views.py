@@ -14,7 +14,6 @@ from . import views
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, get_object_or_404
-from .models import BlogPost
 
 
 
@@ -214,9 +213,9 @@ def delete_blog(request, pk):
       return redirect('blog1')
    
    
-def blog_post_detail(request, blog_id):
-    blog_id = get_object_or_404(Blog, id=blog_id)
-    return render(request, 'blog_post_detail.html', {'blog_id': blog_id})
+def blog_post_detail(request, pk):
+   blog= get_object_or_404(Blog, pk=pk)
+   return render(request, 'blog_post_detail.html', {'blog': blog})
 
 
 
