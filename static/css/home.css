@@ -296,6 +296,7 @@ margin: auto;
  .lock .r .text{
     width: 90%;
     margin: auto;
+    margin-bottom: 15px;
  }
  
  .log{

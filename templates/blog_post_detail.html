@@ -14,17 +14,29 @@
     min-height: 100vh;
   }
   .blog-post-detail img{
-    width: 90%;
+    width: 100%;
     height: 350px;
     object-fit: cover;
+    margin-bottom: 20px;
+    
+  }
+  .blog-post-detail .text{
+    width: 90%;
+    margin: 0px auto ;
+  }
+  
+  @media (max-width:720px) {
+    
   }
 </style>
 <div class="blog-post-detail">
 {% if blog %}
     <img src="{{blog.image.url}}" alt="">
+   <div class="text">
     <h2 class="text-3xl w-full">{{ blog.heading }}</h2>
     <p class="text-align-left w-full">{{ blog.paragraph }}</p>
     <p class="text-align-left w-full">Published on: {{ blog.created_at }}</p>
+   </div>
 {% endif %}
     
 </div>
