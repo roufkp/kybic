@@ -4,13 +4,21 @@ from django.contrib import admin
 from django.urls import path,include
 from django.urls import path
 
-
+from django.conf.urls import handler404,handler400,handler403,handler500
+from registration.views import error_404,error_400,error_403,error_500,error_401,error_405
 
 
 from registration.views import (LandingPageView,contact_page,service_page,
 about_page,blog_page,admin1_page,testimonials_page,blog1_page,blogform_page,form_page
 ,create_testimonial,edit_testimonial,delete_testimonial,create_Blog,edit_blog,delete_blog,)
 # send_message
+
+handler404 = error_404
+handler400 = error_400
+handler403 = error_403
+handler401 = error_401
+handler405 = error_405
+handler500 = error_500
 
 
 urlpatterns = [
@@ -35,16 +43,13 @@ urlpatterns = [
        path('accounts/', include('accounts.urls',namespace="accounts")),
         
        
-       
-      
-      
-
-
-
+    
       
 
 
     # path('send-message/', send_message, name='send_message'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
 
-
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

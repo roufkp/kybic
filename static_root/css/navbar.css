@@ -8,6 +8,8 @@ nav{
     width: 100vw;
     /* background: rgb(0, 0, 0); */
     display: flex;
+    z-index: 10;
+    position: relative;
     justify-content: space-around;
     align-items: center;
     margin: 0;
@@ -15,6 +17,7 @@ nav{
     right: 0px;
     font-family: 'DM Sans', sans-serif;
 }
+
 .right{
     /* margin: auto auto auto 30px; */
 }
@@ -33,7 +36,7 @@ nav{
     list-style: none;
     color: azure;
     transition: all 1s;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .left .links ul li:hover{
     transform: translateY(-5px);
@@ -98,4 +101,7 @@ nav{
         display: block;
     }
     
+    .right .logo img{
+        height: 30px;
+    }
 }

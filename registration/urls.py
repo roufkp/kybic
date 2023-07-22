@@ -2,6 +2,8 @@ from django.urls import path
 from django.urls import path, include
 from .views import test,blog_post_detail
 
+
+
 app_name = "registration"
 
 

@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+
+footer{
+    /* border-top: 1px solid wheat; */
+    width: 100%;
+       /* padding:0px 0px 20px 0px; */
+    background: transparent;
+    position: relative;
+    height: auto;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'DM Sans', sans-serif;
+}
+footer ul{
+    width: auto;
+    background: transparent;
+    margin:  20px;
+}
+footer ul li{
+    list-style: none;
+    text-decoration: none;
+}
+
+/* link container  */
+footer .linkcontainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* background: red; */
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+footer .linkcontainer ul h3{
+    margin: 0;;padding: 0;
+}
+footer .linkcontainer ul span{
+    display: block;
+    width: 100%;
+    height: 0.5px;
+    background-color: antiquewhite;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+footer .linkcontainer .logo{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+}
+footer .linkcontainer .logo img{
+    width: auto;
+    height:45px;
+    margin: auto;
+}
+footer .linkcontainer .chat{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .linkcontainer .chat button{
+    width: fit-content;
+    padding: 12px 28px;
+    font-size: 15px;
+    letter-spacing: .1rem;
+    border: none;
+    background: transparent;
+    box-shadow: inset -20px -16px 0px 2px rgb(2 184 72);
+    border-radius: 100px;
+    color: antiquewhite;
+    transition: all 1s cubic-bezier(.66, .00, .34, 1.00);
+}
+footer .linkcontainer .chat button:hover{
+    box-shadow: inset 0px 0px 0px 0px rgb(2 184 72);
+    background: wheat;
+    transform: translateY(-5px);
+    color: rgb(20, 20, 20);
+    font-weight: 400;
+
+}
+
+
+@media (max-width:540px) {
+
+    footer .linkcontainer .logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+footer .linkcontainer .chat{
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    margin-top: 50px;
+}
+}
+
+
+
+/* social container  */
+footer .socialcontainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    max-width: 300px;
+}
+footer .socialcontainer ul li{
+    width: 20px;
+}
+footer span {
+    height: 1px;
+    background-color: antiquewhite;
+    width: 100%;
+    display: block;
+    /* margin-top: 30px; */
+    margin-bottom: 30px;
+}
+footer .socialcontainer ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px;
+}
+

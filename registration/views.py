@@ -272,3 +272,24 @@ def blog_post_detail(request, pk):
 #         return render(request, 'contact.html')  # Render a success page after sending the email
 #     else:
 #         return render(request, 'contact.html')  # Render the contact form template if it's a GET request
+
+
+
+
+def error_404(request, exception):
+    return render(request, '404.html', {})
+
+def error_500(request):
+    return render(request, '500.html', {})
+
+def error_403(request,exception):
+    return render(request, '403.html', {})
+
+def error_400(request,exception):
+    return render(request, '400.html', {})
+
+def error_405(request, exception):
+    return render(request, '405.html', {})
+
+def error_401(request, exception):
+    return render(request, '401.html', {})

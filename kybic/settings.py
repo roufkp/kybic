@@ -3,36 +3,36 @@
 from pathlib import Path
 
 import os
+import environ
 
+env = environ.Env(
+    DEBUG=(bool, False)
+)
 
-# import environ
+environ.Env.read_env()
+READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', default=False)
+if READ_DOT_ENV_FILE:
+    environ.Env.read_env()
 
-# env = environ.Env(
-#     DEBUG=(bool, False)
-# )
-
-# environ.Env.read_env()
-# READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', default=False)
-# if READ_DOT_ENV_FILE:
-#     environ.Env.read_env()
-
-# DEBUG =env('DEBUG')
-DEBUG =True
+DEBUG =env('DEBUG')
+# DEBUG =True
 # DEBUG = True
 # SECRET_KEY =env('SECRET_KEY') 
+DEBUG =False
+
 SECRET_KEY='django-insecure-_ac#5#dw%h7ew1$16%k#q@vker42oi4hxqpbmzi^veb$8hns6s'
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 ALLOWED_HOSTS = ['*']
-CORS_ALLOWED_ORIGINS = ['']
+# CORS_ALLOWED_ORIGINS = ['']
 
-CORS_ORIGIN_ALLOW_ALL= True
+# CORS_ORIGIN_ALLOW_ALL= True
 
-CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:8000',
-    'http://127.0.0.1:8000',
-]
+# CSRF_TRUSTED_ORIGINS = [
+#     'http://localhost:8000',
+#     'http://127.0.0.1:8000',
+# ]
 
 
 
@@ -46,8 +46,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'registration',
-    'accounts'
+    'accounts',
+    'django.contrib.sites',     # If not already added
+    'django.contrib.sitemaps',  # Add this line
+
+    
 ]
+SITE_ID = 1 
 
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -58,6 +63,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
 
 
@@ -84,32 +90,28 @@ WSGI_APPLICATION = 'kybic.wsgi.application'
 
 
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': env('DB_NAME'),
-#         'USER': env('DB_USER'),
-#         'PASSWORD':env('DB_PASSWORD'),
-#         'HOST':env('DB_HOST'),
-#         'PORT': env('DB_PORT'),
+#         'NAME': 'kybicdb',
+#         'USER': 'root',
+#         'PASSWORD':'kybicio1717',
+#         'HOST':'',
+#         'PORT': '3306',
 #     }
 # }
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'kybicdb',
-        'USER': 'root',
-        'PASSWORD':'kybicio1717',
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
+        'PASSWORD':env('DB_PASSWORD'),
         'HOST':'',
-        'PORT': '3306',
+        'PORT': env('DB_PORT'),
     }
 }
-
 
 # Database
 
@@ -175,8 +177,8 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'developer.addox@gmail.com'
-# EMAIL_HOST_PASSWORD =env('SMTP_PASSWORD')
-EMAIL_HOST_PASSWORD ='vvujrwzodlzspdvt'
+EMAIL_HOST_PASSWORD =env('SMTP_PASSWORD')
+# EMAIL_HOST_PASSWORD ='vvujrwzodlzspdvt'
 
 
 
