@@ -1,0 +1,67 @@
+
+
+<!-- Open Graph Tags (for social media sharing) -->
+<meta property="og:title" content="KYBIC: CRO & Performance-Oriented Web Development" />
+<meta property="og:description" content="Specializing in CRO and Performance-driven web solutions. Boost conversions and site speed with KYBIC." />
+<meta property="og:image" content="images/home12.jpg" /> <!-- Replace 'images/home12.jpg' with the link to a representative image for your site, like a logo or banner. -->
+<meta property="og:url" content="https://kybic.io" />
+<meta property="og:type" content="website" />
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KYBIC: CRO & Performance-Oriented Web Development">
+<meta name="twitter:description" content="Specializing in CRO and Performance-driven web solutions. Boost conversions and site speed with KYBIC.">
+<meta name="twitter:image" content="images/bgpop.jpg"> <!-- Replace 'images/bgpop.jpg' with the link to a representative image for your site. -->
+
+
+
+
+meta property="og:title" content="About KYBIC: Our Story, Mission, and Values" />
+<meta property="og:description" content="Discover KYBIC's journey and our dedication to empowering businesses with top-tier solutions." />
+<meta property="og:url" content="https://kybic.io/about/" />
+<meta property="og:type" content="website" />
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="About KYBIC: Our Story, Mission, and Values">
+<meta name="twitter:description" content="Discover KYBIC's journey and our dedication to empowering businesses with top-tier solutions.">
+
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="KYBIC Services: Comprehensive Web Solutions" />
+<meta property="og:description" content="From web development to mobile app creation, explore KYBIC's diverse services." />
+<meta property="og:url" content="https://kybic.io/services/" />
+<meta property="og:type" content="website" />
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="KYBIC Services: Comprehensive Web Solutions">
+<meta name="twitter:description" content="From web development to mobile app creation, explore KYBIC's diverse services.">
+
+
+
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="Contact KYBIC: Let's Connect and Collaborate" />
+<meta property="og:description" content="Reach out to KYBIC for any inquiries or collaboration opportunities." />
+<meta property="og:url" content="https://kybic.io/contactus/" />
+<meta property="og:type" content="website" />
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Contact KYBIC: Let's Connect and Collaborate">
+<meta name="twitter:description" content="Reach out to KYBIC for any inquiries or collaboration opportunities.">
+
+
+
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="KYBIC Blog: Latest Insights on Web Development, AI & More" />
+<meta property="og:description" content="Explore articles on web development, AI, blockchain, and more from KYBIC's expert team." />
+<meta property="og:url" content="https://kybic.io/blog/" />
+<meta property="og:type" content="website" />
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="KYBIC Blog: Latest Insights on Web Development, AI & More">
+<meta name="twitter:description" content="Explore articles on web development, AI, blockchain, and more from KYBIC's expert team.">

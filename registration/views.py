@@ -90,7 +90,8 @@ def admin1_page(request):
 
 @login_required
 def testimonials_page(request):
-   testimonials = Testimonials.objects.all()
+   user = request.user
+   testimonials = Testimonials.objects.filter(author=user)
    context = {
       'testimonials':testimonials,
    }
@@ -99,7 +100,8 @@ def testimonials_page(request):
 
 @login_required
 def blog1_page(request):
-   a =Blog.objects.all()
+   user = request.user
+   a =Blog.objects.filter(author=user)
    context ={
       'b':a,
    }
@@ -132,7 +134,9 @@ def create_testimonial(request):
    if request.method == 'POST':
       form = TestimonialForm(request.POST, request.FILES)
       if form.is_valid():
-         form.save()  # Save the form data to the model
+         testimonial = form.save(commit=False)
+         testimonial.author = request.user  # Assign the author
+         testimonial.save()
          return redirect('testimonials')  # Redirect to a success page or another view
 
       else:
@@ -149,14 +153,18 @@ def create_testimonial(request):
 
 def edit_testimonial(request, pk):
     testimonial = get_object_or_404(Testimonials, pk=pk)
-    
-    if request.method == 'POST':
-        form = TestimonialForm(request.POST, request.FILES, instance=testimonial)
-        if form.is_valid():
-            form.save()
-            return redirect('testimonials')  # Redirect to testimonials listing page or any other desired page
+    if testimonial.author != request.user:
+        # Return a message indicating unauthorized access
+        # or redirect to an error page.
+        print("sorry you are not authenticated")
     else:
-        form = TestimonialForm(instance=testimonial)
+      if request.method == 'POST':
+         form = TestimonialForm(request.POST, request.FILES, instance=testimonial)
+         if form.is_valid():
+               form.save()
+               return redirect('testimonials')  # Redirect to testimonials listing page or any other desired page
+      else:
+         form = TestimonialForm(instance=testimonial)
     
     return render(request, 'edit_testimonial.html', {'form': form, 'testimonial': testimonial})
 
@@ -182,7 +190,9 @@ def create_Blog(request):
    if request .method == 'POST':
       form = BlogForm(request.POST,request.FILES )
       if form.is_valid():
-         form.save()
+         blog = form.save(commit=False)
+         blog.author = request.user  # Assign the author
+         blog.save()
          return redirect('blog1')
       
    return render(request,'blogform.html',{'form':form, })
@@ -215,6 +225,7 @@ def delete_blog(request, pk):
    
 def blog_post_detail(request, pk):
    blog= get_object_or_404(Blog, pk=pk)
+   print("hi",blog.image.url)
    return render(request, 'blog_post_detail.html', {'blog': blog})
 
 

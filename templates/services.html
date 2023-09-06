@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
+{% block title %}
+  Services
+{% endblock title %}
+{% block meta_tags %}
+ <meta name="description" content="KYBIC offers a range of services from web development to mobile app creation. Discover our process and commitment to digital excellence.">
+ <link rel="canonical" href="https://kybic.io/services/" />
+{% endblock meta_tags%}
 {% block content %}
 <div class="service-main">
     <div class="service1">
@@ -9,7 +16,7 @@
                <strong>  Transforming Ideas into Digital Brilliance !</strong>
                 </h2>
                 <div class="butt">
-                       <button>
+                       <button style="background-color: rgba(21, 76, 255, 0);box-shadow: none;border-radius: 0px;border: 1px solid white;">
                         <a href="tel:+919061713244"> Contact</a>
                       </button>
                 </div>
@@ -21,14 +28,14 @@
             
             <div  data-aos="zoom-in-down" class="discovery">
                 <img src="{% static 'images/r.png' %}" alt="" class="wimgs">
-                <h2><strong>1. discovery</strong></h2>
-                <p>We begin by diving deep into understanding your business, target audience, and goals. Through research and analysis, we gain valuable insights that shape our strategy</p>
+                <h2><strong>1. Discovery</strong></h2>
+                <p>Deep dive into understanding your business for a tailored strategy</p>
 
             </div>
             <div  data-aos="zoom-in-down"  class="planning">
                 <img src="{% static 'images/q.png' %}" alt="" class="wimgs">
-                <h2><strong>2. planning</strong></h2>
-                <p>With a clear understanding of your objectives, we develop a comprehensive plan outlining the project scope, timelines, and deliverables</p>
+                <h2><strong>2. Planning</strong></h2>
+                <p>Comprehensive planning with clear objectives and deliverables</p>
 
             </div>
             <div data-aos="fade-right" class="design big">
@@ -39,9 +46,9 @@
                 <img src="{% static 'images/p.png' %}" alt="" class="wimgl">
             </div> 
             <div class="right">
-                <h2><strong>3. design</strong></h2>
+                <h2><strong>3. Design</strong></h2>
 
-                <p>Our talented designers bring your vision to life, creating visually stunning and user-friendly interfaces that reflect your brand identity and engage your audience</p>
+                <p>Crafting visually stunning and user-centric designs</p>
                 </div>
             </div>
             </div>
@@ -53,31 +60,31 @@
                         <img src="{% static 'images/o.png' %}" alt="" class="wimgl">
                     </div>
                     <div class="right">
-                        <h2><strong>4. development</strong></h2>
+                        <h2><strong>4. Development</strong></h2>
 
-                        <p>Our skilled developers work their magic, turning designs into functional websites or applications, utilizing the latest technologies and best coding practices</p>
+                        <p>Utilizing the latest technologies for optimal functionality</p>
                     </div>
                 </div>
         </div>
             <div  data-aos="zoom-in-down"  class="testing">
                 <img src="{% static 'images/n.png' %}" alt="" class="wimgs">
-                <h2><strong>5. testing</strong></h2>
-                <p>Quality is paramount. We rigorously test every aspect of the project, ensuring optimal performance, responsiveness, and bug-free functionality across various devices and browsers</p>
+                <h2><strong>5. Testing</strong></h2>
+                <p>Ensuring top-notch quality and performance</p>
             </div>
             <div  data-aos="zoom-in-down"  class="deployment">
                 <img src="{% static 'images/l.png' %}" alt="" class="wimgs">
-                <h2><strong>6. deployment</strong></h2>
-                <p>It's time to launch your project into the digital world. We handle the deployment process, ensuring a smooth transition from development to a live environment</p>
+                <h2><strong>6. Deployment</strong></h2>
+                <p>Seamless transition from development to live environment</p>
             </div>
             <div  data-aos="zoom-in-down"  class="optimization">
                 <img src="{% static 'images/m.png' %}" alt="" class="wimgs">
-                <h2><strong>7. optimization</strong></h2>
-                <p>We continuously monitor and optimize your website or application for performance, security, and user experience, keeping it up to date with evolving industry standards</p>
+                <h2><strong>7. Optimization</strong></h2>
+                <p>Continuous improvements for sustained excellence</p>
             </div>
             <div  data-aos="zoom-in-down"  class="support">
                 <img src="{% static 'images/sapport.png' %}" alt="" class="wimgs" style="max-width: 200px;">
-                <h2><strong>8. support</strong></h2>
-                <p>Our commitment doesn't end with the launch. We provide ongoing support and maintenance, assisting you with any technical issues or updates to ensure your digital presence remains seamless</p>
+                <h2><strong>8. Support</strong></h2>
+                <p>Ongoing assistance for any technical needs</p>
             </div>
         </div>
     </div>
@@ -89,7 +96,7 @@
                     In today's fast-paced digital landscape, user experience is paramount. At Kybic, we specialize in creating modern and immersive web solutions that adapt effortlessly to any screen size or device. Our team of skilled designers and developers follows a mobile-first approach, meticulously crafting responsive designs that ensure your website or application looks stunning and performs flawlessly across smartphones, tablets, laptops, and desktops. With our focus on delivering a seamless user experience, you can engage your audience wherever they are, leaving a lasting impression and maximizing your online impact. Experience the power of modernized responsive design with Kybic.
                 </p>   
                 <div class="butt">
-                    <button>
+                    <button style="background-color: rgba(21, 76, 255, 0);box-shadow: none;border-radius: 0px;border: 1px solid white;">
                         <a href="tel:+919061713244"> Contact</a>
                    </button>
              </div>             
@@ -113,8 +120,7 @@
         </div>
        
         <div>
-        <div data-aos="fade-up"
-        data-aos-anchor-placement="bottom-bottom" class="items">
+        <div class="items">
             <!-- <div class="heading">
             </div> -->
             <div class="left"><img src="{% static 'images/webdev.png' %}" alt=""></div>
@@ -131,8 +137,7 @@
       </div>
     </div>
         <div>
-            <div data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom" class="items">
+            <div  class="items">
                 <!-- <div class="left"><img src="{% static 'images/webdev.png' %}" alt=""></div> -->
                 <div class="right">
                     <div class="text">
@@ -148,8 +153,7 @@
           </div>
 
         <div>
-            <div  data-aos="fade-up"
-            data-aos-anchor-placement="bottom-bottom" class="items">
+            <div   class="items">
                 <div class="left"><img src="{% static 'images/e commerce.png' %}" alt=""></div>
                 <div class="right">
                     <div class="text">
@@ -162,8 +166,7 @@
           </div>
           </div>
         <div>
-            <div  data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom" class="items">
+            <div   class="items">
                 <div class="right">
                     <div class="text">
             <h2><strong>Mobile App Development</strong></h2>
@@ -178,8 +181,7 @@
            </div>
 
         <div>
-            <div  data-aos="fade-up"
-            data-aos-anchor-placement="bottom-bottom" class="items">
+            <div   class="items">
                 <div class="left"><img src="{% static 'images/disn.png' %}" alt=""></div>
                 <div class="right">
                     <div class="text">
@@ -208,7 +210,7 @@
                     that your web development and design
                     projects are flawless, reliable, and secure.</p>
                 <div class="butt1">
-                    <button>
+                    <button style="background-color: rgba(21, 76, 255, 0);box-shadow: none;border-radius: 0px;border: 1px solid black;">
                         <a href="tel:+919061713244"> Contact </a>
                    </button>
              </div>             
@@ -225,7 +227,7 @@
                     a seamless experience throughout the
                     development and beyond.</p>
                 <div class="butt">
-                    <button>
+                    <button style="background-color: rgba(21, 76, 255, 0);box-shadow: none;border-radius: 0px;border: 1px solid white;">
                         <a href="tel:+919061713244"> Contact</a>
                    </button>
              </div>             
@@ -236,4 +238,13 @@
       
   
 </div>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Service",
+  "name": "Our Services",
+  "description": "Explore our range of services that cater to your needs.",
+  "url": "https://www.kybic.io.com/services/"
+}
+</script>
 {% endblock content %}

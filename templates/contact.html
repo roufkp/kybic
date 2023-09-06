@@ -1,5 +1,12 @@
 {% extends "base2.html" %}
 {% load static %}
+{% block title %}
+  Contact
+{% endblock title %}
+{% block meta_tags %}
+  <meta name="description" content="Want to discuss a project or have questions? Contact KYBIC today. We're here to help and collaborate.">
+  <link rel="canonical" href="https://kybic.io/contactus/" />
+{% endblock meta_tags%}
 {% block content %}
 <div class="main">
   {% include "navbar2.html" %}
@@ -7,7 +14,7 @@
     <div class="left">
       <h1>contact</h1>
       <p>
-        Reach out to us and let's start a conversation. 
+        Reach out to us and let's start a meaningful conversation. 
       </p> 
         
     </div>
@@ -45,7 +52,7 @@
 
 <div class="textmonials">
   <div class="" style="width: 100%; font-size:28px; font-weight: 600;">
-  <h1>HEAR FROM OUE HAPPY CUSTOMERS</h1>
+  <h1 style="font-family:'DM Sans', sans-serif ;">Hear from our satisfied customers </h1>
 </div>
   {% for testimonial in testimonials %}
   <div class="test-item">
@@ -72,7 +79,7 @@
 <div class="w-full" style="background: #1a1919;">
   <div class="explain">
     <div class="left">
-    <h1>Get in touch</h1>
+    <h1 style="font-family:'DM Sans', sans-serif ;">Get in touch</h1>
     <p> Please use the contact form provided or reach out to us using the contact information below. We strive to respond promptly to all inquiries and look forward to connecting with you. Thank you for your interest in Kybic.
     </p>
   </div>
@@ -85,7 +92,7 @@
     </div>
   
   <div class="login-box">
-    <h1>Feel free to contact</h1>
+    <h1 style="font-family:'DM Sans', sans-serif ;">Use the form below </h1>
   
       <form method="post" action="{% url 'contact' %}">
         {% csrf_token %}  
@@ -106,10 +113,10 @@
           <label>Message</label>
         </div>
         <button type="submit">
+          <!-- <span></span>
           <span></span>
           <span></span>
-          <span></span>
-          <span></span>
+          <span></span> -->
           Send message
         </button>
       </form>
@@ -121,6 +128,16 @@
 </div>
 
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Us - kybic.io",
+  "description": "Get in touch with us. Reach out via phone, email, or our contact form.",
+  "url": "https://www.kybic.io.com/contact/"
+}
+</script>
 
 
 {% endblock content %}

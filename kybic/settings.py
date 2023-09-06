@@ -3,20 +3,18 @@
 from pathlib import Path
 
 import os
-import environ
+# import environ
 
-env = environ.Env(
-    DEBUG=(bool, False)
-)
+# env = environ.Env(
+#     DEBUG=(bool, False)
+# )
 
-environ.Env.read_env()
-READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', default=False)
-if READ_DOT_ENV_FILE:
-    environ.Env.read_env()
+# environ.Env.read_env()
+# READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', default=False)
+# if READ_DOT_ENV_FILE:
+#     environ.Env.read_env()
 
-DEBUG =env('DEBUG')
-# DEBUG =True
-# DEBUG = True
+# DEBUG =env('DEBUG')
 # SECRET_KEY =env('SECRET_KEY') 
 DEBUG =False
 
@@ -24,7 +22,7 @@ SECRET_KEY='django-insecure-_ac#5#dw%h7ew1$16%k#q@vker42oi4hxqpbmzi^veb$8hns6s'
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*' ]
 # CORS_ALLOWED_ORIGINS = ['']
 
 # CORS_ORIGIN_ALLOW_ALL= True
@@ -90,28 +88,28 @@ WSGI_APPLICATION = 'kybic.wsgi.application'
 
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'kybicdb',
-#         'USER': 'root',
-#         'PASSWORD':'kybicio1717',
-#         'HOST':'',
-#         'PORT': '3306',
-#     }
-# }
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': env('DB_NAME'),
-        'USER': env('DB_USER'),
-        'PASSWORD':env('DB_PASSWORD'),
+        'NAME': 'kybicdb',
+        'USER': 'root',
+        'PASSWORD':'kybicio1717',
         'HOST':'',
-        'PORT': env('DB_PORT'),
+        'PORT': '3306',
     }
 }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': env('DB_NAME'),
+#         'USER': env('DB_USER'),
+#         'PASSWORD':env('DB_PASSWORD'),
+#         'HOST':'',
+#         'PORT': env('DB_PORT'),
+#     }
+# }
 
 # Database
 
@@ -163,12 +161,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+# MEDIA_URL = '/media/'
+
+
+
 MEDIA_URL = '/media/'
-
-
-
-
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 
@@ -177,8 +176,8 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'developer.addox@gmail.com'
-EMAIL_HOST_PASSWORD =env('SMTP_PASSWORD')
-# EMAIL_HOST_PASSWORD ='vvujrwzodlzspdvt'
+# EMAIL_HOST_PASSWORD =env('SMTP_PASSWORD')
+EMAIL_HOST_PASSWORD ='vvujrwzodlzspdvt'
 
 
 

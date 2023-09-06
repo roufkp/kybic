@@ -35,7 +35,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url("/static/images/bg2.svg");
+    background-image: url("/static/images/bg2.58d7a8e54228.svg");
     background-repeat: no-repeat;
     background-position: 90% 90%;
     background-size: 320px;
@@ -126,7 +126,7 @@
     background: transparent;
     /* background: linear-gradient(45deg, black, #d70000); */
     background-color: #ededed;
-    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' %3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23FFFAFD'/%3E%3Cstop offset='1' stop-color='%238A8A83'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpattern id='b' width='24' height='24' patternUnits='userSpaceOnUse'%3E%3Ccircle fill='%23ffffff' cx='12' cy='12' r='12'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' fill='url(%23a)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23b)' fill-opacity='0.1'/%3E%3C/svg%3E"); */
+    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' %3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23FFFAFD'/%3E%3Cstop offset='1' stop-color='%238A8A83'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpattern id='b' width='24' height='24' patternUnits='userSpaceOnUse'%3E%3Ccircle fill='%23ffffff' cx='12' cy='12' r='12'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' fill='url(%23a)'/%3E%3Crect width='100%25' height='100%25' fill='url("#b#b")' fill-opacity='0.1'/%3E%3C/svg%3E"); */
     background-attachment: fixed;
     display: flex;
     padding: 35px 0;
@@ -172,7 +172,7 @@
     gap: 10px;
     min-height: none;
     margin: 11px 15px;
-    /* background: #1a1919; */
+    background: #1a1919;
     color: white;
     /* background: #000000; */
     border-radius: 10px;
@@ -249,7 +249,7 @@ margin: auto;
 }
 
 .bmage{
-    /* background-image: url("/static/images/bg4.jpg"); */
+    /* background-image: url("/static/images/bg4.6f60804cba79.jpg"); */
     background-repeat:no-repeat;
     background-size:70%;
     height:70vh;
@@ -280,7 +280,7 @@ margin: auto;
     margin: auto;
  }
 .rono{
- background-image: url("/static/images/home13.jpg");
+ background-image: url("/static/images/home13.cefa29ff914d.jpg");
  background-repeat:no-repeat;
  background-size:100%;
  min-height:50vh;
@@ -415,7 +415,7 @@ margin: auto;
     margin: auto;
     min-height: 65vh;
     display: flex;
-    /* padding: 164px; */
+    padding: 164px;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
@@ -466,7 +466,7 @@ margin: auto;
         justify-content: center;
         flex-direction: column;
         background-repeat: no-repeat;
-
+    background-color: red;
 
     }
     

@@ -1,16 +1,23 @@
 {% extends "base.html" %}
 {% load static %}
+{% block title %}
+  About
+{% endblock title %}
+{% block meta_tags %}
+<meta name="description" content="Discover KYBIC's journey from inception to becoming a leading solution provider. Learn about our mission, values, and commitment to excellence.">
+ <link rel="canonical" href="https://kybic.io/about/" />
+{% endblock meta_tags%}
 {% block content %}
 <div class="about-main">
     <div class="abou">
       <div class="text">
-        <h2><strong>Empowering businesses through advanced technology and human connection </strong></h2>
+        <h2><strong>Empowering businesses through a blend of advanced technology and genuine human connection. </strong></h2>
         <div class="butt">
             <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20px" height="20px">
                 <path d="M2 12h20M14 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
                -->
-               <button>
+               <button  style="background-color: rgba(21, 76, 255, 0);box-shadow: none;border-radius: 0px;border: 1px solid white;">
                 <a href="tel:+919061713244"> Contact</a>
               </button>
         </div>
@@ -18,13 +25,7 @@
         </div>
         <div class="kyb">
             <h1><strong>How KYBIC rised</strong></h1>
-            <p>We started Kybic with a vision of creating a software that would simplify the lead management 
-                process for businesses of all sizes. Our founders, who are experienced sales and marketing professionals,
-                 realized that existing solutions were either too complex or too expensive, 
-                 so they set out to create a better one.        
-                After months of research and development, we launched our software and started helping businesses manage their 
-                leads and sales activities more effectively. Today, we're proud to have helped thousands of businesses achieve
-                 more success with our software.</p>
+            <p>KYBIC was founded with a vision of simplifying the lead management process for businesses of all sizes. Our founders, experienced sales and marketing professionals, identified that existing solutions were either too complex or too expensive. This realization led them to create a better solution.</p>
         
         </div>
         <div class="main">
@@ -47,15 +48,15 @@
         <div class="none">
             <div data-aos="fade-up"
             data-aos-anchor-placement="bottom-bottom" class="non" >
-                <h2><strong>vision</strong></h2>
+                <h2><strong>Vision</strong></h2>
                 <span class="uline" style="width: 150px;"></span>
-                <p>our mission is to empower businesses to grow and succeed by providing them with an all-in-one lead management</p>
+                <p>Our Mission Is To Empower Businesses To Grow And Succeed By Providing Them With An All-In-One Lead Management</p>
             </div>
             <div data-aos="fade-up"
             data-aos-anchor-placement="bottom-bottom" class="missi">
-                <h2><strong>mission</strong></h2>
+                <h2><strong> Mission</strong></h2>
                 <span class="uline" style="width: 150px;"></span>
-                <p>our mission is to empower businesses to grow and succeed by providing them with an all-in-one lead management</p>
+                <p>Our Mission Is To Empower Businesses To Grow And Succeed By Providing Them With An All-In-One Lead Management</p>
             </div>
         </div>
 
@@ -65,25 +66,25 @@
             data-aos-anchor-placement="bottom-bottom" class="text">
                 <h2><strong>Our Values</strong></h2>
                 <span class="uline"></span>
-                <p>At Kybic, we believe in honesty, integrity, innovation, and customer satisfaction. We always put our customers first and strive to exceed their expectations with our software and services.</p>
+                <p>At KYBIC, our core values are honesty, integrity, innovation, and unwavering customer satisfaction.</p>
             </div>
             <div data-aos="fade-up"
             data-aos-anchor-placement="bottom-bottom" class="text">
                 <h2><strong>Our Team</strong></h2>
                 <span class="uline"></span>
-                <p>Our team is made up of talented professionals who are passionate about helping businesses succeed. We have a diverse group of individuals with different backgrounds and skills, but we all share the same goal of making our software the best it can be.</p>
+                <p>A diverse group of passionate professionals, all driven by a shared goal: to make our solutions the best in their class.</p>
             </div>
             <div data-aos="fade-up"
             data-aos-anchor-placement="bottom-bottom" class="text">
                 <h2><strong>Our Approach</strong></h2>
                 <span class="uline"></span>
-                <p>We take a customer-centric approach to developing our software, which means we work closely with our customers to understand their unique needs and challenges. We use their feedback to continuously improve our software and provide them with the best possible experience.</p>
+                <p>A customer-centric methodology, where we collaborate closely with our clients, understanding their unique challenges and needs.</p>
             </div>
             <div data-aos="fade-up"
             data-aos-anchor-placement="bottom-bottom" class="text">
                 <h2><strong>Our Commitment</strong></h2>
                 <span class="uline"></span>
-                <p>We're committed to providing our customers with the highest level of service and support. We offer training, resources, and a dedicated support team to ensure that our customers get the most out of our software.</p>
+                <p>Beyond just solution development, we're here for you with training, resources, and dedicated support.</p>
             </div>
 
         </div>
@@ -111,4 +112,14 @@
     
 
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "AboutPage",
+  "name": "About Us - kybic.io",
+  "description": "Learn more about us and our mission to provide top-quality services.",
+  "url": "https://www.kybic.io.com/about/"
+}
+</script>
 {% endblock content %}

@@ -13,7 +13,7 @@ class Testimonials(models.Model):
     paragraph = models.TextField(null=True,blank=True)
     image = models.ImageField(upload_to='images/')
     created_at = models.DateTimeField(default=timezone.now)
-
+    author = models.ForeignKey(User, on_delete=models.CASCADE,default=1)
 
     def save(self, *args, **kwargs):
         if not self.id:
@@ -36,7 +36,7 @@ class Blog(models.Model):
     paragraph = models.TextField(null=True,blank=True)
     image = models.ImageField(upload_to='images/')
     created_at = models.DateTimeField(default=timezone.now)
-
+    author = models.ForeignKey(User, on_delete=models.CASCADE,default=1)
 
     def save(self,*args, **kwargs):
         if not self.id:

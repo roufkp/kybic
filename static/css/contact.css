@@ -304,7 +304,7 @@ max-width: 800px;
   display: inline-block;
   padding: 10px 20px;
   font-weight: bold;
-  color: #fff;
+  color: #f8f8f8;
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
@@ -312,8 +312,9 @@ max-width: 800px;
   transition: .5s;
   margin-top: 40px;
   letter-spacing: 3px;
-  background-color: #000000;
-  border: none;
+  background-color: transparent;
+  border: 1px solid white ;
+  border-radius: 0px;
 }
 .login-box form button{
   color: #fff;

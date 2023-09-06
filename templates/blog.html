@@ -1,11 +1,18 @@
 {% extends "base.html" %}
 {% include "" %}
 {% load static %}
+{% block title %}
+  Blogs
+{% endblock title %}
+{% block meta_tags %}
+  <meta name="description" content="Stay updated with KYBIC's blog. Dive into insights on web development, AI, blockchain, IoT, and other tech trends.">
+  <link rel="canonical" href="https://kybic.io/blog/"/>
+{% endblock meta_tags%}
 {% block content %}
 
 <section class="bg-dark dark:bg-gray-900">
   <div class="container px-6 py-10 mx-auto">
-      <h1 class="text-3xl font-semibold text-white capitalize lg:text-4xl dark:text-white">From the blog</h1>
+      <h1 class="text-3xl font-semibold text-white capitalize lg:text-4xl dark:text-white">From the KYBIC blog</h1>
 
       <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
      {% for blog in blog %}
@@ -30,6 +37,21 @@
 
  
 
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Blog Post Title",
+  "description": "A brief summary of the blog post.",
+  "url": "https://www.kybic.io.com/blog/post-url",
+  "datePublished": "2023-08-10",
+  "image": "your-image-url.jpg",
+  "author": {
+    "@type": "Person",
+    "name": "Author Name"
+  }
+}
+</script>
 
   
 {% endblock content %}

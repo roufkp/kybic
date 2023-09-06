@@ -31,11 +31,11 @@
 </style>
 <div class="blog-post-detail">
 {% if blog %}
-    <img src="{{blog.image.url}}" alt="">
+    <img src="{{ blog.image.url }}" alt="{{ blog.heading }}">
    <div class="text">
     <h2 class="text-3xl w-full">{{ blog.heading }}</h2>
     <p class="text-align-left w-full">{{ blog.paragraph }}</p>
-    <p class="text-align-left w-full">Published on: {{ blog.created_at }}</p>
+    <p class="text-align-left w-full " style="font-size: 12px; margin-top: 20px; ">Published on: {{ blog.created_at }} </p>
    </div>
 {% endif %}
     
